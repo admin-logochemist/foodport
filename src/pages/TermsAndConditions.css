@@ -1,0 +1,70 @@
+.font__terms{
+    font-family: "Poppins", sans-serif;
+}
+.TermsAndCondition__main {
+    background-image: url('../images/termsbg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 60vh;
+}
+@media only screen and (max-width: 1200px) {
+    .TermsAndCondition__main {
+        background-size: cover;
+    }
+}
+.txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.txt h1 {
+    margin-top: 140px;
+    color: white;
+    font-weight:  bold;
+}
+@media only screen and (max-width: 1200px) {
+    .txt h1 {
+        margin-top: 200px;
+        color: white;
+        font-weight:  bold;
+        font-size: 20px;
+    }
+}
+.terms__txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.terms__txt h2{
+    font-size: 14px;
+}
+.terms__txt h1{
+    font-size: 20px;
+    font-weight: bold;
+}
+.paragraph {
+    width: 660px;
+    font-size: 14px;
+    color: grey;
+}
+@media only screen and (max-width: 1200px) {
+    .paragraph {
+        width: 300px;
+        font-size: 14px;
+        color: grey;
+    }
+}
+.copyright__Terms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d70000;
+    height: 40px;
+}
+.copyright__Terms h1 {
+    margin-top: 9px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}

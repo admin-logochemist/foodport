@@ -1,0 +1,12 @@
+.test2 img{
+    border-radius: 50%;
+    height: 300px;
+    margin-left: -37px;
+}
+@media only screen and (max-width: 1200px) {
+    .test2 img{
+        border-radius: 50%;
+        height: 200px;
+        margin-left: 1px;
+    }
+}

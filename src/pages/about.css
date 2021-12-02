@@ -1,0 +1,64 @@
+.About-main {
+    background-image: url('../images/Aboutimage.jpg');
+    background-size: contain;
+    height: 75vh;
+    background-repeat: no-repeat;
+}
+@media only screen and (max-width: 1200px) {
+    .About-main {
+        background-size: cover;
+    }
+}
+.About-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.About-text h1{
+    margin-top: 200px;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+}
+.para {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.para h1{
+    font-weight: bold;
+    font-size: 30px;
+}
+@media only screen and (max-width: 1200px) {
+    .para {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        flex-direction: column;
+    }
+    .para h1{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .para p {
+        font-size: 12px;
+    }
+}
+.copright__About {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d70000;
+    height: 35px;
+}
+.copright__About h1{
+    margin-top: 9px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+.paragraph__about {
+    width: 700px;
+}

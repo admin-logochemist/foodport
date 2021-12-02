@@ -1,0 +1,39 @@
+.Mobile-layout {
+    display: none;
+}
+.btn-main-nav{
+    font-family: "Poppins", sans-serif !important;
+    background-color: #d70000;
+    border: hidden;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.btn-main-nav:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+.logo-png{
+    width: 220px;
+    height: 50px;
+}
+@media only screen and (max-width: 900px) {
+    .logo-png{
+        width: 135px;
+        height: 5vh;
+        margin-top: 10px;
+    }
+    .Mobile-layout{
+        padding: 10px;
+        display: inline;
+        display: flex;
+    }
+    .Mobile-layout a{
+        color: black;
+        margin: 10px;
+        text-decoration: none;
+        font-size: 12px;
+    }
+}

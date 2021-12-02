@@ -1,0 +1,65 @@
+.Dashboard-Tabs{
+    background-color: whitesmoke;
+    
+     color: black;
+ }
+ .MuiTabs-vertical {
+     flex-direction: column;
+     background: whitesmoke;
+     color: black;
+     font-weight: 900;
+ }
+ .Dashboard-box h1{
+     color: Red;
+ }
+ .Dashboard-box h2{
+     font-weight: bold;
+ }
+ .event__infoTop{
+     width: 25vw;
+ }
+ .event__infoTop> h3 {
+     font-weight: 90px;
+     margin-top: 10px;
+     font-size: 23px;
+ }
+ .event__infoTop>p {
+     font-size: 13px;
+     margin-top: 10px;
+     color: gray;
+ }
+ .eventr__info{
+     display: flex;
+     flex-direction: column;
+ }
+ .A-Box {
+     display: flex;
+     justify-content: space-between;
+     height: 16vh;
+     background-color: whitesmoke;
+     border-radius: 10px;
+     width: 800px;
+     margin: 5px;
+ }
+ .A-Box:hover{
+    background-color: rgba(215, 0, 0, 0.3);
+    cursor: pointer;
+ }
+ .Box-heading2 p{
+     display: flex;
+     align-items: flex-start;
+     justify-content: space-around;
+     flex-direction: row;
+ }
+ /* .Box-headings {
+     margin: 10px;
+ } */
+
+ .btn-FOodcart {
+     margin-top: -10px;
+     color: white;
+     background-color: #d70000;
+     border: hidden;
+     padding: 5px;
+     border-radius: 5px;
+ }

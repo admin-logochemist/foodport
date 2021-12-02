@@ -1,0 +1,556 @@
+.font-home {
+  font-family: "Acme", sans-serif;
+}
+.font-poppins {
+  font-family: "Poppins", sans-serif !important;
+}
+.mobile-image {
+  width: 550px;
+  height: 500px;
+}
+.asd{
+  background-color: #d70000;
+}
+.testimonials {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.testimonial-name {
+  font-size: 20px;
+  padding: 20px;
+  font-weight: bold;
+}
+.white-thing {
+  margin: 15px;
+  background-color: white;
+  text-align: center;
+  width: 23%;
+  border-radius: 10px;
+  float: left;
+  padding: 20px;
+  height: 380px;
+}
+.Download-the-App {
+  display: block;
+}
+.Download-the-App h1 {
+  font-family: "PT Sans Narrow", sans-serif;
+  color: black;
+}
+.Download-the-App p {
+  color: white;
+}
+.p-tab {
+  font-size: 15px;
+}
+.Heading-one {
+  font-weight: bolder;
+  font-size: 40px;
+}
+@media only screen and (max-width: 1200px) {
+  .Heading-one {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+}
+.btn-mobile {
+  margin: 2px;
+  width: 150px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+.form-search-bar {
+  background-color: red;
+  width: 550px;
+  height: 100px;
+  border-bottom: 100px solid black;
+  border-left: 120px solid transparent;
+  display: flex;
+  flex-wrap: wrap;
+}
+.Imput-Search {
+  width: 240px;
+  height: 60px;
+  border-radius: 10px;
+}
+.for-white{
+  color: white;
+}
+.green h1 {
+  padding-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.green p {
+  font-size: 13px;
+}
+@media only screen and (max-width: 1200px) {
+  .Mobile-image-sec {
+    width: 300px;
+    margin-top: 100px;
+    top: -50px;
+    height: 200px;
+  }
+  .Red-section {
+    background-color: red;
+    height: 80vh;
+  }
+  .mobile-image {
+    width: 300px;
+    height: 300px;
+  }
+  .testimonials {
+    display: flex;
+    justify-content: space-between;
+  }
+  .green h1 {
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .green p {
+    font-size: 13px;
+  }
+  .white-thing {
+    width: 300px;
+    height: 400px;
+  }
+  .Download-the-App h1 {
+    padding: 15px;
+    color: black;
+  }
+  .Download-the-App p {
+    padding: 15px;
+    color: white;
+  }
+  .btn-mobile {
+    margin-left: 25px;
+  }
+  .form-search-bar {
+    width: 380px;
+    height: 150px;
+    border-bottom: 150px solid black;
+    border-left: 120px solid transparent;
+    margin-right: 50px !important;
+  }
+  .Imput-Search {
+    /* margin-right: 20px !important; */
+    /* margin-right: 20px; */
+    width: 170px;
+  }
+  .MuiTab-root {
+    max-width: 125px !important;
+  }
+  .form-search-bar {
+    width: 550px;
+    height: 78px;
+    border-bottom: 107px solid black;
+    border-left: 120px solid transparent;
+  }
+}
+.Red-section {
+  background-color: red;
+}
+.Red-section-sub {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.Mobile-image-sec {
+  position: relative;
+  top: -100px;
+  height: 298px;
+}
+.font-home {
+  font-family: "Acme", sans-serif;
+}
+.mobile-image {
+  width: 550px;
+  height: 500px;
+}
+
+.testimonials {
+  /* width: 400px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-name {
+  font-size: 20px;
+  padding: 20px;
+  font-weight: bold;
+}
+.white-thing {
+  margin: 15px;
+  background-color: white;
+  text-align: center;
+  width: 23%;
+  border-radius: 10px;
+  float: left;
+  padding: 20px;
+  height: 380px;
+}
+.Download-the-App {
+  display: block;
+}
+.Download-the-App h1 {
+  font-family: "PT Sans Narrow", sans-serif;
+  color: black;
+}
+.Download-the-App p {
+  color: white;
+}
+.btn-mobile {
+  margin: 2px;
+  width: 150px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+.form-search-bar {
+  background-color: red;
+  width: 550px;
+  height: 100px;
+  border-bottom: 100px solid black;
+  border-left: 120px solid transparent;
+  display: flex;
+  flex-wrap: wrap;
+}
+.Imput-Search {
+  width: 240px;
+  height: 60px;
+  border-radius: 10px;
+}
+.green h1 {
+  padding-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.green p {
+  font-size: 13px;
+}
+@media only screen and (max-width: 1200px) {
+  .Mobile-image-sec {
+    width: 300px;
+    margin-top: 100px;
+    top: -50px;
+    height: 200px;
+  }
+  .Red-section {
+    background-color: red;
+    height: 80vh;
+  }
+  .mobile-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .green h1 {
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .green p {
+    font-size: 13px;
+  }
+  .white-thing {
+    width: 300px;
+    height: 400px;
+  }
+  .Download-the-App h1 {
+    padding: 15px;
+    color: black;
+  }
+  .Download-the-App p {
+    padding: 15px;
+    color: white;
+  }
+  .btn-mobile {
+    margin-left: 25px;
+  }
+  .form-search-bar {
+    width: 380px;
+    height: 150px;
+    border-bottom: 150px solid black;
+    border-left: 120px solid transparent;
+    margin-right: 50px !important;
+  }
+  .Imput-Search {
+    /* margin-right: 20px !important; */
+    /* margin-right: 20px; */
+    width: 170px;
+  }
+  .MuiTab-root {
+    max-width: 125px !important;
+  }
+  .form-search-bar {
+    width: 550px;
+    height: 78px;
+    border-bottom: 107px solid black;
+    border-left: 120px solid transparent;
+  }
+}
+.Red-section {
+  background-color: #d70000;
+
+}
+.Red-section-sub {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.Mobile-image-sec {
+  position: relative;
+  top: -100px;
+  height: 298px;
+}
+.banner {
+  height: 600px;
+  position: relative;
+  color: white;
+  object-fit: contain;
+}
+.banner__contents {
+  margin-left: 30px;
+  padding-top: 140px;
+  height: 190px;
+}
+@media only screen and (max-width: 1200px) {
+  .banner__contents {
+    margin-left: 30px;
+    padding-top: 140px;
+    height: 190px;
+  }
+}
+.banner__title {
+  margin-top: 50px;
+  font-size: 5.5rem;
+  font-weight: bold;
+  padding-bottom: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .banner__title {
+    margin-right: 60px;
+    margin-top: 50px;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.test__description {
+  width: 45rem;
+  line-height: 1.3;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  max-width: 360px;
+  height: 80px;
+}
+.banner__fadeBottom {
+  height: 17rem;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(32, 32, 32, 0.021),
+    rgb(2, 2, 2)
+  );
+}
+.banner__button {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 0.2vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-right: 1rem;
+  padding-top: 0.5rem;
+  background-color: rgba(10, 10, 10, 0.192);
+  padding-bottom: 0.5rem;
+}
+.banner__button:hover {
+  color: black;
+  background-color: white;
+  transition: all 0.2s;
+}
+.Searchbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+
+@media only screen and (max-width: 1200px) {
+  .Searchbar {
+    display: flex;
+    color: #000;
+    justify-content: center;
+    align-items: center;
+    
+  }
+}
+input.location-search-input {
+  width: 300px;
+  border-radius: 20px;
+  height: 50px;
+}
+
+.red-one {
+  color: #d70000;
+  padding-left: 15px;
+}
+@media only screen and (max-width: 1200px) {
+  .red-one {
+    display: flex;
+    flex-direction: column;
+    color: #d70000;
+    padding-right: 150px;
+  }
+}
+.font {
+  font-family: "Birthstone", cursive;
+}
+.Bar {
+  background-color: red;
+  height: 100px;
+}
+.Search-form {
+  height: 100px;
+}
+.red-two {
+  color: red;
+}
+.Second-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+.View-all-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.View-All {
+  background-color: white;
+  border: hidden;
+  font-size: 20px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #000;
+}
+.View-All:hover {
+  background-color: #d70000;
+  border: hidden;
+  color: white;
+  font-weight: bold;
+}
+.inputss {
+  height: 60px;
+  width: 350px;
+  border: hidden;
+  color: black;
+}
+.btn-search {
+  height: 60px;
+  width: 160px;
+  margin-left: 2px;
+  background-color: #d70000;
+  border: hidden;
+  color: white;
+}
+@media only screen and (max-width: 1200px) {
+  .inputss {
+    height: 40px;
+    width: 320px;
+    border: hidden;
+    color: black;
+    border-radius: 10px;
+  }
+  .btn-search {
+    margin: 10px;
+    height: 30px;
+    width: 140px;
+    margin-left: 2px;
+    background-color: #d70000;
+    border: hidden;
+    color: white;
+    border-radius: 10px;
+  }
+}
+/* .Discover-main {
+  background-color: whitesmoke;
+} */
+.Discover {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 80px;
+}
+.Discover h1{
+  font-weight: bold;
+}
+@media only screen and (max-width: 1200px)  {
+  .Discover h1{
+      font-size: 20px;
+  }
+}
+.copyright-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d70000;
+  color: white;
+  height: 35px;
+}
+.copyright-home h1{
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 7px;
+}
+@media only screen and (max-width: 1200px) {
+  .copyright-home h1{
+    font-size: 10px;
+    font-weight: bold;
+  }
+}
+.white-color {
+  color: white;
+  font-weight: bold; 
+}
+@media only screen and (max-width: 1200px) {
+  .white-color {
+    font-size: 20px;
+  }
+}
+.Simple-line {
+  padding-top: 10px;
+  border-bottom: 2px solid white;
+}
+.Android-apple-image {
+  width: 200px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1200px) {
+  .Android-apple-image {
+    width: 150px;
+  }
+}

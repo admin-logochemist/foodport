@@ -1,0 +1,101 @@
+.AddCart{
+    background-color: whitesmoke;
+}
+.cart__container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.logo{
+    object-fit: contain;
+    height: 50px;
+}
+.cart__container>form{
+    display: flex;
+    flex-direction: column;
+}
+.cart__container>form>input{
+    width: 350px;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.cart__container>form>select{
+    width: 350px;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.cart__container>form>textarea{
+    width: 350px;
+    height: 80px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.cart__container>form>button{
+    width: 355px;
+    height: 54px;
+    font-size: large;
+    background-color:rgb(64, 64, 163);
+    border-radius: 5px;
+    color: white;
+}
+.cart__container>form>p{
+margin-top: 10px;
+text-align: center;
+}
+
+.Right-Copy{
+    display: flex;
+    background-color: #d70000;
+    height: 40px;    
+    justify-content: center;
+    align-items: center;
+    margin-top: 55px;
+}
+.Right-Copy h1{
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    margin-top: 8px;
+}
+@media only screen and (max-width: 1200px){
+    .Right-Copy{
+        display: flex;
+        background-color: #d70000;
+        height: 40px;    
+        justify-content: center;
+        align-items: center;
+        margin-top: 130px;
+    }
+    .Right-Copy h1{
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        margin-top: 8px;
+    }
+    .cart__container>form>input{
+        width: 270px;
+        height: 50px;
+        font-size: 20px;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+    .cart__container>form>button{
+        width: 260px;
+        height: 54px;
+        font-size: large;
+        border-radius: 5px;
+        color: white;
+    }
+}
+

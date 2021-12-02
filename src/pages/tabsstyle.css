@@ -1,0 +1,35 @@
+.tabs {
+    display: flex;
+    justify-content: center;
+}
+.Tabpanel12 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.MuiAppBar-colorPrimary {
+    color: black!important;
+    background-color: white!important;
+}
+.MuiPaper-elevation4 {
+    box-shadow: none!important;
+}
+.MuiTab-wrapper {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background-color: #d70000;
+    padding: 12px;
+    border-radius: 10px;
+    border-bottom: 6px solid black;
+}
+/* @media only screen and (max-width : 1200) {
+    .MuiTab-wrapper{
+
+    }
+} */

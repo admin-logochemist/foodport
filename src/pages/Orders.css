@@ -1,0 +1,9 @@
+.orders {
+    padding: 1px 80px;
+}
+
+.orders > h1 {
+    margin: 30px 0;
+    font-size: 30px;
+    font-weight: bold;
+}

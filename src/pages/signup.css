@@ -1,0 +1,116 @@
+.login {
+  background-color: whitesmoke;
+  height: 94vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.login__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.logo {
+  object-fit: contain;
+  height: 50px;
+}
+.login__container > form {
+  display: flex;
+  flex-direction: column;
+}
+.login__container > form > input {
+  height: 50px;
+  font-size: 20px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.login__container > form > select {
+  height: 50px;
+  font-size: 15px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.login__container > form > button {
+  width: 355px;
+  height: 54px;
+  font-size: large;
+  background-color: rgb(64, 64, 163);
+  border-radius: 5px;
+  color: white;
+}
+.login__container > form > p {
+  margin-top: 10px;
+  text-align: center;
+}
+.sign-in-image {
+  display: flex;
+}
+.sign-in-image img {
+  margin-bottom: 40px;
+  height: 55vh;
+  width: 45vh;
+}
+.sign-up-image {
+  display: flex;
+}
+.sign-up-image img {
+  margin-bottom: 40px;
+  height: 55vh;
+  width: 45vh;
+}
+.copyright-login {
+  background-color: #d70000;
+  height: 39px;
+  display: flex;
+  justify-content: center;
+}
+.copyright-login h1 {
+  color: white;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1200px) {
+  .copyright-login {
+    display: flex;
+    margin-top: 350px;
+  }
+}
+.register-btn {
+  border-radius: 10px;
+  border: hidden;
+  background-color: #d70000;
+  color: white;
+  font-weight: 700px;
+}
+.divider {
+  border-top: 3px solid #000;
+  margin-top: 10px;
+}
+.copyright-signup-login {
+  background-color: #d70000;
+  height: 39px;
+  display: flex;
+  justify-content: center;
+}
+.copyright-signup-login h1 {
+  color: white;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1200px) {
+  .copyright-signup-login {
+    display: flex;
+    margin-top: 150px;
+  }
+  .copyright-signup-login h1 {
+    color: white;
+    font-size: 12px;
+  }
+}

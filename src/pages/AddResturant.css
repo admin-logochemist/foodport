@@ -1,0 +1,46 @@
+.AddResturant{
+    background-color: whitesmoke;
+}
+.resturant__container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.logo{
+    object-fit: contain;
+    height: 50px;
+}
+.resturant__container>form{
+    display: flex;
+    flex-direction: column;
+}
+.resturant__container>form>input{
+    width: 350px;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.resturant__container>form>select{
+    width: 350px;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.resturant__container>form>button{
+    width: 355px;
+    height: 54px;
+    font-size: large;
+    background-color:rgb(64, 64, 163);
+    border-radius: 5px;
+    color: white;
+}
+.resturant__container>form>p{
+margin-top: 10px;
+text-align: center;
+}
+
