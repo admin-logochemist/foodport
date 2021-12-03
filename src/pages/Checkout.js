@@ -7,6 +7,7 @@ import CheckoutProduct from './CheckoutProduct'
 import { useHistory } from 'react-router'
 import StripeCheckout from 'react-stripe-checkout';
 import Footer from './Footer'
+import Navbar from '../components/Navbar'
 import Currency from 'react-currency-formatter';
 import "./Checkout.css"
 import {loadStripe} from '@stripe/stripe-js'
@@ -26,7 +27,9 @@ function Checkout() {
     }
     
     return (
+   
         <div>
+		<Navbar/>
         <div>
             <main style={{ display: 'flex' ,flexDirection:'row' ,justifyContent:'space-around',flexWrap:'wrap' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', padding: 5, justifyContent: 'space-between', backgroundColor: 'white' }}>
@@ -78,6 +81,7 @@ function Checkout() {
             <h1>Copyright 2020.All rights reserved.</h1>
         </div>
         </div>
+
     )
 }
 export default Checkout

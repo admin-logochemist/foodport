@@ -406,11 +406,15 @@
     align-items: center;
     
   }
+
 }
 input.location-search-input {
   width: 300px;
-  border-radius: 20px;
   height: 50px;
+  background: transparent;
+  border: none;
+  border-bottom: 5px solid red;
+color: white;
 }
 
 .red-one {

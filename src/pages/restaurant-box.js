@@ -7,6 +7,7 @@ import FoodResults from './FoodResults';
 import { Image } from 'react-bootstrap';
 import { db } from '../firebase'
 import { useLocation } from 'react-router';
+import Navbar from '../components/Navbar'
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 function Restaurantbox(props) {
@@ -64,7 +65,10 @@ function Restaurantbox(props) {
   };
   const selectResturant = useSelector(selectOpenResturant)
   return (
+  
+
     <div>
+      		<Navbar/>
       {console.log('food', food)}
       {console.log('selectResturant', selectResturant)}
       <div style={{

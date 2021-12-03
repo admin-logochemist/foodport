@@ -9,7 +9,7 @@ import { selectUser } from '../features/UserSlice'
 import {  selectItems, selectTotal } from '../features/BasketSlice';
 import axios from './axios';
 import { db } from "../firebase";
-
+import Navbar from '../components/Navbar'
 const Stripe = () => {
     const user = useSelector(selectUser)
     const items = useSelector(selectItems)
@@ -87,9 +87,11 @@ const Stripe = () => {
     }
 
     return (
+        <>
+        <Navbar/>
         <div className='payment'>
             <div className='payment__container'>
-                <h1>
+                <h1 style={{display:'flex',fontSize:38,letterSpacing:2, alignItems:'left'}}>
                     Checkout (
                         <Link to="/checkout">{items.length} items</Link>
                         )
@@ -102,9 +104,9 @@ const Stripe = () => {
                         <h3>Delivery Address</h3>
                     </div>
                     <div className='payment__address'>
-                        <p>{user?.email}</p>
-                        <p>123 React Lane</p>
-                        <p>Los Angeles, CA</p>
+                    <p className="p_address">{user?.displayName}</p>  
+                        <p className="p_address">{user?.email}</p>
+                     
                     </div>
                 </div>
 
@@ -162,6 +164,7 @@ const Stripe = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 export default Stripe
