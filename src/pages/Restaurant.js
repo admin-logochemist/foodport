@@ -5,6 +5,7 @@ import BoxSx from './RestaurentsDetails'
 import { useSelector } from 'react-redux';
 import { db } from "../firebase"
 import { selectUser } from '../features/UserSlice';
+import { CenterFocusStrong } from '@material-ui/icons';
 const Restaurant = () => {
 
   const user = useSelector(selectUser)
@@ -53,9 +54,9 @@ const Restaurant = () => {
             <Sidebars/>
             </div>
            <div>
-           <div classname="Dashboard-box">
+           <div classname="Dashboard-box" style={{display:'flex',alignItems:'center',justifyContent:'center',paddingTop:10}}>
               
-                <h2 style={{ fontWeight: 'bold' }}>Your Restaurants</h2>
+                <h2 style={{ fontWeight: 'bold',fontSize:40 }}>Your Restaurants</h2>
               </div>
               <div className="btn-one">
               {renderResturants()}

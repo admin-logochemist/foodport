@@ -6,7 +6,7 @@ import { selectUser } from '../features/UserSlice'
 import Order from './Order'
 import { selectItems } from '../features/BasketSlice';
 import { Sidebars } from './Sidebars';
-
+import Navbar from '../components/Navbar'
 function Orders() {
 const user = useSelector(selectUser);
 const items = useSelector(selectItems)
@@ -31,20 +31,24 @@ const items = useSelector(selectItems)
   }, [user])
 
     return (
-        <div className="div">
+        <>
+        <Navbar/>
+        <div className="" style={{backgroundColor:"#ff2c2c"}}>
+          
             {/* <div>
                 <Sidebars/> 
             </div> */}
-        <div className='orders'>
-            <h1>Your Orders</h1>
+        <div className=''>
+            
 
-            <div className='orders__order'>
+            <div className=''>
                 {orders?.map(order => (
                     <Order order={order} />
                 ))}
             </div>
         </div>
         </div>
+        </>
     )
 }
 

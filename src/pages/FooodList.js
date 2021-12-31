@@ -1,43 +1,32 @@
 import React from 'react'
 import "./FoodResults.css"
 import { useDispatch } from 'react-redux';
-
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button
+  } from 'reactstrap';
+  import './RestaurentsDetails.css'
 function FoodList({
     img, title, description, price,email,_id,remail
 }) {
     const dispatch = useDispatch();
    
     return (
-        <div className="eventResults">
-            <img src={img} alt="" />
-
-            <div class="eventr__info">
-                <div class="event__infoTop">
-
-                    <h3>{title}</h3>
-                    <p>------</p>
-                    <p>{remail}</p>
-                    <p>{description}</p>
-                
-             
-
-
-                </div>
-                <div class="event__infoBottom">
-                    <div class="event__stars">
-
-                    </div>
-                    <div class="event__price">
-                        <h3>
-                            $ {price}
-                        </h3>
-
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
+        <div>
+   
+    <Card className="bty" style={ { margin: 10,cursor: 'pointer',width: 300}}>
+      <img top width="100%" src={img} alt="Card image cap" />
+      <CardBody>
+      <CardTitle tag="h4">{title}</CardTitle>
+      
+        <CardText>{description}</CardText>
+        <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',flexwrap:'wrap'}}>
+        <CardText>${price}</CardText>
+               </div>
+      </CardBody>
+    </Card>
+  </div>
+    
     )
 }
 

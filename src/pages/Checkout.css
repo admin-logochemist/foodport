@@ -5,9 +5,34 @@
     padding: 10px;
     font-weight: bold;
 }
+
 .btn-proceed:hover{
     background-color: whitesmoke;
     color: black;
+}
+
+.fg{
+    border: 1px solid white;
+    transition: all .9s linear;
+    border-radius: 10px;
+}
+.InputContainer .InputElement {
+    position: absolute;
+    top: 0;
+    color: white;
+}
+.fg:hover{
+    transition: all .9s linear;
+  
+}
+.StripeElement.StripeElement--focus,
+.StripeElement.StripeElement--empty {
+    background: white;
+    padding: 10px;
+}
+.bty:hover{
+    transition: all .9s linear;
+    box-shadow: silver 3px 3px 3px 3px;
 }
 .Subtotal{
     font-weight: bold;

@@ -1,3 +1,109 @@
+.seefoodItem{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+}
+.Ham{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.right-card{
+    float: right;
+    width: 20%;
+    height: 66vh;
+    position: fixed;
+    overflow: hidden;
+    right: 0;
+    top: 39%;
+    background: #fff;
+   
+    box-shadow: -2px 10px 31px grey;
+}
+/* .fooditeminfo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+} */
+
+.picback{
+    width: 100%;
+    height: 70vh;
+    background-size: cover !important;
+    background-position: center;
+}
+.gocheck:hover{
+background-color: #ff2c2c;
+color: white;
+box-shadow: -2px 10px 31px grey;
+font-weight: 700;
+}
+/* JS CLASS */
+.cardstyle{
+    right: -10px !important;
+}
+.your_card_head{
+    display: block;
+    height: 46px;
+    text-align: center;
+    padding-top: 17px;
+    width: 77%;
+    margin: 52px auto;
+    color: #fff;
+    background: #ff2c2c;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 9px;
+}
+
+p.your_card_para {
+    text-align: center;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-family: Poppins;
+    text-transform: capitalize;
+}
+
+span.borrderr {
+    border-top: 1px solid gray;
+    display: block;
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+}
+.style_card {
+    padding: 20px;
+}
+p.subtotals {
+    text-align: left;
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+p.totals_amounts {
+    text-align: left;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+p.subtotals > span,p.totals_amounts span{
+    float: right;
+}
+
+.style_card button{
+    margin: auto;
+    display: block;
+    border: none;
+    padding: 20px 72px;
+    letter-spacing: 2px;
+    font-family: Poppins;
+    border-radius: 4px;
+}
+#animate {
+    float: right;
+  }
 .headings{
     padding: 50px;
 }
@@ -6,8 +112,23 @@
 }
 .default{   
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+    float: left;
+    position: relative;
+    left: 16%;
+}
+p.your_card_para {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    padding-left: unset !important;
+}
+p.subtotals, p.totals_amounts {
+    text-align: left;
+    font-size: 17px;
+    letter-spacing: 1px;
+    padding-left: unset !important;
 }
 .next{
     padding: 0px;
@@ -18,7 +139,7 @@
     }
 }
 .next h1{ 
-    padding: 45px;
+    padding: 22px;
 }
 .next p{ 
     padding-left: 45px;

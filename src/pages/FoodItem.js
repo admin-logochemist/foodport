@@ -49,6 +49,7 @@ function FoodItem(props) {
         return detail.map((item) => {
           // const storageRef = projectStorage.ref(`images/${item.id}/`).getDownloadURL();
           return (
+
             <FoodList
               img={item?.postImage}
               category={item?.category}
@@ -89,8 +90,9 @@ function FoodItem(props) {
             fontWeight: 'bold'
           }}>{selectResturant?.resName}</h1>
       
-       
+<div className='seefoodItem'>       
            {renderFood()} 
+           </div>
         </div>
      
       </div>

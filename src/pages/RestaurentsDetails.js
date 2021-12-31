@@ -8,6 +8,7 @@ import {
 } from 'reactstrap';
 import { useDispatch } from 'react-redux';
 import { selectResturant } from '../features/ResSlice';
+
 function RestaurentsDetails({ obj }) {
   const [count, setCount] = useState(0);
   const dispatch=useDispatch();
@@ -25,7 +26,7 @@ function RestaurentsDetails({ obj }) {
   return (
     <div>
     {console.log('óbj', obj)}
-    <Card style={{    margin: 10,cursor: 'pointer',width: 300}}>
+    <Card className="bty" style={ {cursor: 'pointer',width: 300}}>
       <img top width="100%" src={obj?.postImage} alt="Card image cap" />
       <CardBody>
       <CardTitle tag="h4">{obj?.resName}</CardTitle>

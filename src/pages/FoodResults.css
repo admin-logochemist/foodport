@@ -12,6 +12,16 @@
     margin-top: 20px;
     
 }
+.btn-Cart {
+    margin-top: -10px;
+    color: white;
+    background-color: #d70000;
+    border: hidden;
+    padding: 12px;
+    font-weight: 700;
+    font-size: 12px;
+    border-radius: 5px;
+}
 .eventResults>:hover{
     opacity: 0.8;
 }

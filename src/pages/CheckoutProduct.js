@@ -1,50 +1,33 @@
 import Button from '@restart/ui/esm/Button'
-import React from 'react'
-import { Image } from 'react-bootstrap'
+import React,{useState} from 'react'
+import { Image, Row } from 'react-bootstrap'
 import {useDispatch} from 'react-redux'
 import { removeFromBasket } from '../features/BasketSlice'
+import CloseIcon from '@mui/icons-material/Close';
 import "./Checkout.css"
 function CheckoutProduct({img,title,description,price,_id,remail}) {
     const dispatch=useDispatch()
 const removeItemFromBasket=()=>{
 dispatch(removeFromBasket({_id}))
 }
+const [style, setStyle] = useState("fg");
+const changeStyle = () => {
+    console.log("you just clicked");
+  
+    setStyle("fgt");
+  };
     return (
-        <div>
-   <div className="eventResults">
-       {console.log('img', img)}
-            <img src={img} alt="" width='500px' height='500px' />
-            
-            <div class="eventr__info">
-                <div class="event__infoTop">
-        
-                    <h3 style={{
-                        fontWeight: 'bold'
-                    }}>{title}</h3>
-                    <p>------</p>
-                    <p>{remail}</p>
-                    <p style={{
-                        fontWeight: 'bold'
-                    }}>{description}</p>                  
-                </div>                  
-                <div class="event__infoBottom">
-                    <div class="event__stars">
-                        
-                    </div>
-                    <div class="event__price">
-                        <Button className="btn-Remove-cart" color="success" onClick={removeItemFromBasket}>Remove Cart</Button>
-                        <h3> 
-                           $ {price}
-                        </h3>
-                     
-                    </div>
-
-
+        <div className="itemsss">
+                <div className="foodport_items_checkout">
+                     <img src={img} className="img-fluid" alt=""/> 
+                   <div className="foodMain_checkout">
+                      <h4 className="food_checkout_title">{title}</h4>
+                      <p className="food_checkout_descriptionsss">{description}</p>
+                      <h5 className="pricetags_checkout">{price}</h5>
+                   </div>
                 </div>
-                </div>     
               </div>
 
-        </div>
     )
 }
 

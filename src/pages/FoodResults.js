@@ -1,8 +1,14 @@
-import React from 'react'
+import React,{useState} from 'react'
 import "./FoodResults.css"
 import { useDispatch } from 'react-redux';
 import { addToBasket } from '../features/BasketSlice';
-
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button
+  } from 'reactstrap';
+  import {Modal} from 'react-bootstrap'
+ 
+  
 function FoodResults({
     img, title, description, price,email,_id,remail
 }) {
@@ -12,38 +18,34 @@ function FoodResults({
             img, title, description, price,_id,remail
         }
         dispatch(addToBasket(product))
+    
+        setShow(true)
     }
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
     return (
-        <div className="eventResults">
-            <img src={img} alt="" />
-
-            <div class="eventr__info">
-                <div class="event__infoTop">
-
-                    <h3>{title}</h3>
-                    <p>------</p>
-                    <p>{remail}</p>
-                    {/* <p>{description}</p> */}
-                
-                    <button className="btn-Add" onClick={addItemsToBasket}> Add To Basket</button>
-
-
-                </div>
-                <div class="event__infoBottom">
-                    <div class="event__stars">
-
-                    </div>
-                    <div class="event__price">
-                        <h3>
-                            $ {price}
-                        </h3>
-
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
+        <div>
+   
+        <Card className="bty" style={ { margin: 10,cursor: 'pointer',width: 300,borderRadius:20}}>
+          <img top width="100%" style={{borderRadius:20}} src={img} alt="Card image cap" />
+          <CardBody>
+          <CardTitle tag="h4">{title}</CardTitle>
+          
+            <CardText>{description}</CardText>
+            <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',flexwrap:'wrap'}}>
+            <CardText ><span style={{fontSize:28,color:'black'}}>$</span><span style={{fontSize:28,fontWeight:'bolder'}}>{price}</span></CardText>
+            <button className="btn-Cart" onClick={addItemsToBasket}> Add To Basket</button>
+                   </div>
+          </CardBody>
+        </Card>
+        <Modal show={show} onHide={handleClose} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title>FoodPort</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Added Item to Cart Successfully</Modal.Body>
+        
+      </Modal>
+      </div>
     )
 }
 

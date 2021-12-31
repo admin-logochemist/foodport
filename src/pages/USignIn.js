@@ -23,7 +23,7 @@ function USignIn(props) {
           uid: userAuth.uid,
           displayName: userAuth.displayName,
         }))
-        history.push('/')
+        
       } else {
     
         dispatch(logout)
@@ -40,7 +40,7 @@ function USignIn(props) {
         displayName: userAuth.user.displayName,
       }))
     })
-    
+    history.push("/")
     
     
   }

@@ -1,0 +1,112 @@
+
+
+.card_row{
+    justify-content: center;
+    margin: 20px auto;
+}
+.main_card{
+    box-shadow: inset 9px 53px 83px grey;
+    width: 97%;
+    border-radius: 15px;
+    background: #80808052;
+    display: block;
+    margin-top: -83px;
+}
+.main_card > .img_box{
+    overflow: hidden;
+}
+.main_card > .img_box > img{
+    border-bottom-right-radius: 30px;
+    transform: rotate( 
+10deg) translate(-15px, -55px);
+    object-fit: fill;
+    overflow: hidden;
+    position: relative;
+    left: -5px;
+}
+.title_body {
+    padding-bottom: 14px;
+    position: relative;
+    top: -11px;
+}
+.title_body::after{
+    position: absolute;
+    content: "";
+    top: 84%;
+    left: 8%;
+    z-index: 999;
+    background: #bdc3c7;
+    height: 1%;
+    width: 80%;
+}
+.title_body > h3{
+    font-size: 15px;
+    white-space: normal;
+    padding-left: 28px;
+    padding-right: 50px;
+}
+.details{
+    padding: 0 17px;
+    position: relative;
+    background: rgba(31,180,189,.8313725490196079);
+    border-radius: 0 0 15px 15px;
+    padding-bottom: 14px;
+}
+.details_inner{
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+
+.details_inner > img{
+    height: 23px;
+    object-fit: fill;
+    position: relative;
+    top: -4px;
+}
+.details_inner .Pricing{
+    padding-left: 6px;
+    color: white;
+    font-size: 16px;
+    white-space: pre-wrap;
+    font-weight: 800;
+    font-family: Poppins;
+}
+.tags{
+    display: block;
+    font-size: 15px;
+    color: darkslategray;
+    font-family: Poppins;
+}
+
+.main_container{
+    max-width: 1355px !important;
+    display: block;
+    margin: auto;
+}
+@media screen and (max-width:1280px) {
+    .details {
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .details_inner .Pricing {
+        font-size: 12px;
+    }
+    .details_inner > img {
+        height: 19px;
+    }
+    .tags {
+        display: block;
+        font-size: 12px;
+        color: darkslategray;
+        font-family: Poppins;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .main_card > .img_box > img{
+        left: 0%;
+    }
+}

@@ -7,7 +7,13 @@ import { db, projectStorage } from "../firebase";
 import { useLocation, useParams } from 'react-router';
 import { useSelector } from 'react-redux';
 import { selectUser } from '../features/UserSlice'
-
+// import emailpic from '../email.png'
+import logo from './logo1.png'
+import back from './backgrouds.jpg'
+// import lock from './password.png'
+// import phones from './phone.png'
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import signin from './signin.png'
 function AddFood() {
   const user = useSelector(selectUser);
   const [title, setTitle] = useState("");
@@ -62,28 +68,63 @@ function AddFood() {
     )
   }
   return (
-    <div className="AddCart">
-      <div className="cart__container">
-        <h1>Add Food</h1>
-        <form>
-          {console.log('params', params)}
-          {console.log('location', location)}
-          <input value={category} type="text" placeholder="Category" onChange={(e) => setCategory(e.target.value)} />
-          <select value={type} onChange={(e) => setType(e.target.value)}>
-            <option value="">Select Food Type</option>
-            <option value="dinner">Dinner</option>
-            <option value="lunch">Lunch</option>
-            <option value="breakfast">Breakfast</option>
-          </select>
-          <input value={title} type="text" placeholder="Title" onChange={(e) => setTitle(e.target.value)} />
-          <input value={price} type="number" placeholder="Price" onChange={(e) => (setPrice(e.target.value))} />
-          <textarea value={description} type="text" placeholder="Description" onChange={(e) => setDescription(e.target.value)} />
-          <label for="file">Food Picture</label>
-          <input onChange={addImagetoPost} type="file" id="file" name="datafile" />
-          <Button onClick={handleSubmit}>ADD FOOD</Button>
-        </form>
-      </div>
-    </div>
+    <div className="form_img add_food" style={{backgroundImage: `url(${back})`}}>
+    <div class="main_from form form_secd">
+           <div class="upper_div"></div>    
+       </div>
+       <form>
+       <center className="center_img">
+   
+     <img src={logo} alt='hj'/>
+   
+     </center>
+     <div className="row justify-content-center form_rows form_secd">
+     <div className="col-lg-10">
+     <h3 className="text-center">Add Food</h3>
+
+     <div class="icons_group icons_groups">
+     {/* <img src={signin} alt='asd' className='as' /> */}
+     <input className="form-control" value={category} type="text" placeholder="Category" onChange={(e) => setCategory(e.target.value)} />
+     </div>
+     <br/>
+            <select className="form-control" value={type} onChange={(e) => setType(e.target.value)}>
+            {/* disabled selected */}
+             <option >Select Food Type</option>
+             <option value="dinner">Dinner</option>
+             <option value="lunch">Lunch</option>
+             <option value="breakfast">Breakfast</option>
+           </select>
+     <div className="icons_group icons_groups">
+     {/* <img src={phones} alt='as' className='df'/> */}
+     <input className="form-control" value={title} type="text" placeholder="Title" onChange={(e) => setTitle(e.target.value)} />
+     </div>
+     <br/>
+     <div className="icons_group icons_groups">
+     {/* <img src={emailpic} alt='a' className='gh'/> */}
+     <input className="form-control" value={price} type="number" placeholder="Price" onChange={(e) => (setPrice(e.target.value))}/>    
+     </div>
+     <br/>
+     <div className="icons_group icons_groups descrip">
+     {/* <img src={lock} alt='asdf' className='jk' /> */}
+     <textarea value={description} type="text" placeholder="Description" onChange={(e) => setDescription(e.target.value)} />
+     </div>
+     {/* <label for="file">Food Picture</label> */}
+       <input onChange={addImagetoPost} type="file" id="file" name="datafile" style={{border: 'none'}}/>
+     
+     {/* <select name="UserType" className="form-control" id="usertype" value={select} onChange={handleCapacity}>
+                              <option disabled selected>User Type</option>
+                              <option value="user"> User</option>
+                              <option value="business"> Business</option>
+                          </select>
+                          */}
+                           <br/>
+                           <br/>
+                           <button class="form_btns"onClick={handleSubmit}>ADD FOOD</button> 
+                          
+                           </div>
+                           </div>
+       </form>
+           </div>
   )
 }
 

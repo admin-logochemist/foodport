@@ -1,0 +1,51 @@
+.checkout_banner{
+    background-image: url(./Banner-5.jpg);
+    position: relative;
+    background-size: cover;
+    height: 80vh;
+    
+}
+.shop_head{
+    font-size: 23px;
+    font-family: Poppins;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.check_borderr{
+    display: block;
+    border-top: 1px solid red;
+    width: 50%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+button.shop_bttn {
+    border: none;
+    padding: 10px 21px;
+    letter-spacing: 5px;
+    /* border-right: 3px solid black; */
+    border-radius: 9px;
+    background: #ff2c2c;
+    color: white;
+    margin: auto;
+    display: block;
+}
+.proceed_head{
+    font-size: 23px;
+    font-family: Poppins;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.box-left{
+    border-radius: 14px 0 0 0;
+    box-shadow: inset 2px 4px 12px grey;
+    border: 3px solid red;
+    background-color: white;
+}
+.box-right{
+    border-radius: 0 14px 0 0 ;
+    box-shadow: inset 2px 4px 12px grey;
+    border: 3px solid red;
+    background-color: white;
+}

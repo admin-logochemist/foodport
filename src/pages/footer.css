@@ -185,12 +185,16 @@
   font-size:14px;
   margin-bottom:0;
 }
+.hvAhYL{
+  font-size: 14px;
+}
 
 .footer-clean ul a {
   font-family: "Poppins", sans-serif;
   color:inherit;
   text-decoration:none;
   opacity:0.8;
+  font-size: 14px;
   color: white;
 }
 

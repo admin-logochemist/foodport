@@ -64,7 +64,7 @@ const Profile = (props) => {
         <Grid item >
           <div className={classes.iconsize} >
             <div>
-              <div style={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', flexWrap: 'wrap-reverse' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', flexWrap: 'wrap-reverse' ,flexDirection:'column' }}>
                 <div className="test2">
                   <img src={test2} />
                 </div>

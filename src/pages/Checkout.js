@@ -9,15 +9,25 @@ import StripeCheckout from 'react-stripe-checkout';
 import Footer from './Footer'
 import Navbar from '../components/Navbar'
 import Currency from 'react-currency-formatter';
-import "./Checkout.css"
+import "./Checkouts.css"
 import {loadStripe} from '@stripe/stripe-js'
+import { selectUser } from '../features/UserSlice'
+import CheckoutPro from './CheckoutPro'
+import 'bootstrap/dist/css/bootstrap.min.css';
 function Checkout() {
+    const user =useSelector(selectUser);
     const stripePromise=loadStripe();
     const items = useSelector(selectItems);
     const history=useHistory()
     const total = useSelector(selectTotal)
     function createCheckout (){
-        history.push('/stripe')
+ if(!user){
+     history.push("./MainLogin")
+     alert("Please Signin Before Checkout")
+    }else{
+        history.push("./stripe")
+    }
+    
     }
     function handleTheClick (){
         history.push('/')
@@ -31,15 +41,28 @@ function Checkout() {
         <div>
 		<Navbar/>
         <div>
-            <main style={{ display: 'flex' ,flexDirection:'row' ,justifyContent:'space-around',flexWrap:'wrap' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', padding: 5, justifyContent: 'space-between', backgroundColor: 'white' }}>
-                    <h1 className="h1h1">
-                        {items.length === 0 ? "Your Food Basket Is Empty, Please Add Some Items" : "Your Shopping Basket :"}
-                    </h1>
-                    <button className="Browse-btn" onClick={() => handleTheClick()}>Continue Shopping</button>
-                    <div>
+        <div class="checkout_top">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-6 p-3 box-left">
+                    <h4 class="shop_head">{items.length === 0 ? "Your Food Basket Is Empty, Please Add Some Items" : "Your Shopping Basket :"}</h4>
+                    <span class="check_borderr"></span>
+                    <button class="shop_bttn"  onClick={() => handleTheClick()}>Continue Shopping</button>
+               
+                </div>
+                <div class="col-6 p-3 box-right">
+                    <h4 class="proceed_head">SUBTOTAL [{items.length}]: <span>${total}</span></h4>
+                    <span class="check_borderr"></span>
+                    <button class="shop_bttn" onClick={() => createCheckout()}>Proceed To CheckOut</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+  
+    <div class="container-fluid">
+    <div class="row mt-4">
                         {items && items?.length ? items.map((item, i) => {
-                            return <CheckoutProduct
+                            return <CheckoutPro
                                 key={i}
                                 img={item?.img || ''}
                                 title={item?.title||''}
@@ -54,24 +77,20 @@ function Checkout() {
                         }
                         ) : null}
                         {console.log(items)}
-                    </div>
-                </div>
-                <div>
-                    {items.length>0 && (
-                        <>
-                        <div className="background-color">
-                        <h3 className="Subtotal">Subtotal({items.length}):
-                        <span>
-                            <Currency quantity={total} currency="USD"/>
-                        </span>
-                        </h3>
-                        
-                        <Button className="btn-proceed" role="Link" onClick={() => createCheckout()}> Proceed To CheckOut</Button>
+                      
                         </div>
-                        </>
-                    )}
-                </div>
-            </main>
+        </div>
+    <br/>
+            <br/>
+            <br/>    <br/>
+            <br/>
+            <br/>    <br/>
+            <br/>
+            <br/>    <br/>
+            <br/>
+            <br/>    <br/>
+            <br/>
+            <br/>
             <br/>
             <br/>
             <br/>

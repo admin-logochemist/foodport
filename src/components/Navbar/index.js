@@ -1,73 +1,66 @@
 import React from 'react';
-import {
-Nav,
-NavLink,
-Bars,
-NavMenu,
-NavBtn,
-NavBtnLink,
-NavLogo,
-} from './NavbarElements';
 import { useSelector,useDispatch } from 'react-redux';
+import logo from '../../images/logologo.png'
 import "./NavbarElements.css"
+import { selectItems } from '../../features/BasketSlice';
+import { Avatar } from '@material-ui/core';
 import { logout, selectUser } from '../../features/UserSlice';
 import { auth } from '../../firebase';
-import logo from '../../images/logologo.png'
 import { Link, useHistory } from "react-router-dom";
 import Badge from "@material-ui/core/Badge";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import { selectItems } from '../../features/BasketSlice';
-const Navbar = () => {
+export default function Navbar() {
     const user =useSelector(selectUser);
     const [itemCount, setItemCount] = React.useState(0);
     const history=useHistory();
     const  dispatch = useDispatch();
     const items=useSelector(selectItems)
+    const goorder=()=>{
+history.push("/orders")
+    }
     const signOut=()=>{
         auth.signOut().then(()=>{
             dispatch(logout())
             history.push("/MainLogin");
         })
     }
+    function handleClicks() {
+        history.push("/contact");
+      }
     function handleClick() {
         history.push("/");
       }
-      function handletheClick() {
+      function handletheClickss() {
         history.push("/SignUp");
       }
+      function handletheClick() {
+        history.push("/Checkout");
+      }
     return (
-        <>
-           <Nav style={{ cursor: 'pointer' }}>
-           
-            <img className="logo-png" src={logo} onClick={() => handleClick()}/>
-            {/* <Bars /> */}
-            <div className="Mobile-layout">
-            <a href="/">HOME</a>
-            <a href="/contact">CONTACT</a>
-            <a href="/MainLogin">LOGIN</a>
-            </div>
-            <NavMenu>
-                <NavLink to="/" activeStyle>
-                    HOME
-                </NavLink>
-                <NavLink to="/contact" activeStyle>
-                    CONTACT
-                </NavLink>
-                
-                <div style={{marginRight:10}} onClick={signOut} activeStyle>
-                    <span>{user? "LOGOUT":"LOGIN"}</span>
-                </div>
-                <button className="btn-main-nav" onClick={() => handletheClick()}>BECOME A PARTNER</button>
-                    <Badge color="secondary" badgeContent={itemCount}>
-                        <div style={{ color: '#d70000', marginLeft: 10 }}>
-                        <ShoppingCartIcon  onClick={()=>{history.push('Checkout')}}/>
-                        {items.length}
-                        </div>
-                    </Badge>
-            </NavMenu> 
-           </Nav> 
-        </>
-);
+        <nav>
+        <div className="wrapper">
+            <div className="logoasheader"><a href="/"><img src={logo} alt="" height="81px" /></a></div>
+            <input type="radio" name="slider" id="menu-btn" />
+            <input type="radio" name="slider" id="close-btn" />
+            <ul className="nav-links">
+                <label for="close-btn" className="btn close-btn"><i className="fas fa-times"></i></label>
+                <li onClick={handleClick}><a >Home</a></li>
+                <li onClick={handleClicks}><a>Contact</a></li>
+                <li onClick={goorder}><a >{user? "YOUR ORDERS":""}</a></li>
+                <li  onClick={signOut}><a  X>{user? "LOGOUT":"LOGIN"}</a></li>
+                <li onClick={handletheClickss}><a  className='foodport_partner'>BECOME A PARTNER</a></li>
+                <li onClick={handletheClick}><a><i class="fas fa-shopping-cart"></i> {items.length}</a></li>
+                <li className='user_icon'></li>
+                <li className='header_user_icon'>{user? `Hi ${user?.displayName}`:<Avatar/>}</li>
+            </ul>
+               {/* <div className='md_topper_info'>
+               <li><a href="/" className='foodport_partner_sed'>BECOME A PARTNER</a></li>
+                <li><a href="/"><i class="fas fa-shopping-cart card_sed"></i></a></li>
+                <li className='user_icon_border'></li>
+                <li><a href="/"><i class="fas fa-user user_sed"></i></a></li>
+                <li className='header_user_icon_sed'>Hi William</li>
+               </div> */}
+            <label for="menu-btn" className="btn menu-btn"><i className="fas fa-bars"></i></label>
+        </div>
+    </nav>
+    )
 };
-
-export default Navbar;

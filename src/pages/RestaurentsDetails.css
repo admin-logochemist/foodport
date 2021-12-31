@@ -54,12 +54,16 @@
  /* .Box-headings {
      margin: 10px;
  } */
-
- .btn-FOodcart {
-     margin-top: -10px;
-     color: white;
-     background-color: #d70000;
-     border: hidden;
-     padding: 5px;
-     border-radius: 5px;
- }
+.bty{
+    box-shadow: 12px 5px 5px whitesmoke;
+}
+.btn-FOodcart {
+    margin-top: -10px;
+    color: #fff;
+    background-color: #d70000;
+    border: hidden;
+    padding: 11px 8px;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 5px;
+}

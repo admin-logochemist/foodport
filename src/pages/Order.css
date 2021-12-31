@@ -1,11 +1,122 @@
-.order {
-  padding: 90px;
-    margin: 20px 0;
-    border: 1px solid lightgray;
-    background-color: white;
-    position: relative;
+.foodorders {
+  margin: 20px auto;
+  width: 90%;
+  border: 1px solid hsla(0,0%,50.2%,.38823529411764707);
+    padding: 14px;
+    border-radius: 14px;
+}
+.order-admin-img {
+  height: 240px!important;
+  border-radius: 10px;
+  object-fit: cover;
+  margin: auto;
+  display: block;
+  border: 1px solid hsla(0,0%,50.2%,.38823529411764707);
+  padding: 11px;
+  border-radius: 17px;
 }
 
+.order-admin-title {
+  font-size: 17px;
+  margin-top: 13px;
+  font-weight: 700;
+  font-family: 'Poppins';
+  letter-spacing: 1px;
+}
+.order-admin-title-one {
+  font-size: 14px;
+  font-weight: 600 !important;
+  border-bottom: 1px solid #e5e0e08c;
+  padding-bottom: 19px;
+}
+.order-admin-price {
+  font-size: 17px;
+  margin-top: 13px;
+  font-weight: 700;
+  font-family: 'Poppins';
+  letter-spacing: 1px;
+}
+
+.orders_titles {
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 1px;
+  font-family: 'Poppins';
+  color: black;
+  font-weight: 800;
+}
+.orders_names {
+  font-size: 17px;
+  color: black;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-family: 'Poppins';
+}
+.orders_border {
+  border-bottom: 1px solid black;
+  display: block;
+  width: 24%;
+}
+.cols{
+  width: 74%;
+  display: flex;
+  padding: 10px;
+  border-radius: 16px;
+  box-shadow: 2px 3px 14px grey;
+  margin-top: 15px;
+}
+.orderss {
+  padding: 90px;
+  margin: 20px 0;
+  /* border: 1px solid red; */
+  background-color: #fff;
+  position: relative;
+  width: 80%;
+  justify-content: center;
+  display: flex;
+ 
+  margin: auto;
+  margin: 29px auto;
+  border-radius: 9px;
+  box-shadow: -3px 2px 17px grey;
+}
+.order {
+  padding: 90px;
+  margin: 20px 0;
+  /* border: 1px solid red; */
+  background-color: #fff;
+  position: relative;
+  width: 80%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin: 29px auto;
+  border-radius: 9px;
+  box-shadow: -3px 2px 17px grey;
+}
+p.card-text {
+  text-align: left;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+.det-packages .boxpackages {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px 16px 80px;
+  margin: 12px;
+  float: none;
+  width: 30%;
+  box-shadow: 0 0 9px 2px #00000059;
+  position: relative;
+  border: 0;
+  transition: all .3s ease-out;
+  margin-bottom: 0;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;}
 .order__id {
     position: absolute;
     top: 40px;
@@ -13,7 +124,15 @@
   }
 
 .order__total {
-    font-weight: 500;
-    text-align: right;
+  font-weight: 500;
+  font-size: 23px;
+  text-align: left;
   }
-  
+  .order h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid black;
+    /* border-radius: 7px; */
+    font-size: 30px;
+    font-weight: 500;
+}

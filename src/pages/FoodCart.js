@@ -59,9 +59,9 @@ const FoodCart = () => {
             <Sidebars/>
             </div>
             <div>
-            <div classname="Dashboard-box">
-                  <h1 style={{ color: 'red', fontSize: 15, fontWeight: 'bold' }}>Dashboard</h1>
-                  <h2 style={{ fontWeight: 'bold' }}>Your FoodCart</h2>
+            <div classname="Dashboard-box" style={{display:'flex',alignItems:'center',justifyContent:'center',paddingTop:10}}>
+                
+                  <h2 style={{ fontWeight: 'bold',fontSize:40 }}>Your FoodCart</h2>
                 </div>
                 <div className="btn-one">
                 {renderFoodCart()}

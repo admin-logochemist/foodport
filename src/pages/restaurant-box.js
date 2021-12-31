@@ -6,7 +6,10 @@ import { selectOpenResturant } from '../features/ResSlice';
 import FoodResults from './FoodResults';
 import { Image } from 'react-bootstrap';
 import { db } from '../firebase'
+import { useHistory } from 'react-router'
+import { selectItems, selectTotal } from '../features/BasketSlice'
 import { useLocation } from 'react-router';
+import { selectUser } from '../features/UserSlice'
 import Navbar from '../components/Navbar'
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -17,6 +20,11 @@ function Restaurantbox(props) {
   const [value, setValue] = React.useState(0);
   const [food, setFood] = useState([]);
   const { state } = useLocation()
+  const total = useSelector(selectTotal)
+  const items = useSelector(selectItems);
+  const history=useHistory();
+  const user =useSelector(selectUser);
+
   const getResturants = () => {
     console.log('state?._id', state?._id)
     db.collection('food').where('_id','==',selectResturant._id).onSnapshot(snapshot => (
@@ -28,8 +36,34 @@ function Restaurantbox(props) {
   };
   useEffect(() => {
     getResturants();
-
+    cardanimation();
   }, [])
+  const cardanimation=()=> {
+    let id = null;
+    const elem = document.getElementById("animate");
+    let pos = 0;
+    clearInterval(id);
+    id = setInterval(frame, 100);
+    function frame() {
+      if (pos == 10) {
+        clearInterval(id);
+       
+      } else {
+        pos++; 
+      //   elem.style.top = pos + "px"; 
+        elem.style.right = pos + "px"; 
+      }
+    }
+  }
+  const goCheckout=()=>{
+    if(!user){
+      history.push("./MainLogin")
+      alert("Please Signin Before Checkout")
+     }else{
+         history.push("./stripe")
+     }
+     
+  }
   const renderFood = () => {
     if (food.length > 0) {
       console.log("food", food);
@@ -72,14 +106,16 @@ function Restaurantbox(props) {
       {console.log('food', food)}
       {console.log('selectResturant', selectResturant)}
       <div style={{
-        backgroundColor: '#fafad2'
+        backgroundColor: '#dd4825'
       }}>
       <div style={{
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: '#f5f5f58c'
       }}>
-        <Image className="Restaurent-image" width="70%" height="500px" src={selectResturant?.postImage} />
+        {/* <Image className="Restaurent-image" width="70%" height="500px" src={selectResturant?.postImage} /> */}
+        <div className="picback" style={{backgroundImage:`url(${selectResturant?.postImage})` }}></div>
       </div>
       </div>
       {/* Headings Area */}
@@ -87,6 +123,8 @@ function Restaurantbox(props) {
         <div style={{
           marginTop: 20
         }}>
+          <div className='Ham'>
+          <div>
           <h1 style={{
             fontWeight: 'bold'
           }}>{selectResturant?.resName}</h1>
@@ -100,29 +138,39 @@ function Restaurantbox(props) {
             fullIcon={<i className="fa fa-star"></i>}
             activeColor="#FFFF00"
           />
-          <p style={{
-            fontWeight: 'bold'
-          }}> Email : <span style={{
-            color: '#d70000',
-            fontWeight: 'bold'
-          }}>{selectResturant?.email}</span></p>
-          <p style={{
-            fontWeight: 'bold'
-          }}>Phone No # <span style={{
-            color: '#d70000',
-            fontWeight: 'bold'
-          }}>{selectResturant?.phone}</span></p>
-          {renderFood()}
-        </div>
-        <div className="next">
+          <span><span style={{fontWeight:'bold'}}>Email: </span>{selectResturant?.email}</span>
+          <br/>
+          <span><span style={{fontWeight:'bold'}}>Phone: </span>{selectResturant?.phone}</span>
+          </div>
+          <div>
           <h1 style={{
             fontWeight: 'bold'
           }}>Location</h1>
-          <p>{selectResturant?.address}</p>
+          <span style={{marginLeft: 23}}>{selectResturant?.address}</span>
+          </div>
+          </div>
+     <div className='fooditeminfo'>
+          {renderFood()}
+        </div>
+        <div className="next">
+         
+          <div className="right-card" id="animate">
+        <h3 className="your_card_head">Your Cart</h3>
+        <p className="your_card_para">Start adding items to your cart</p>
+        <span classNmae="borrderr"></span>
+        <div className="style_card">
+            <p className="subtotals">Items <span>{items.length}</span></p>
+        <p className="totals_amounts">Total <span>${total}</span></p>
+
+        <button className='gocheck' onClick={goCheckout} >GO TO CHECKOUT</button>
         </div>
       </div>
       <br/>
       <br/>
+     
+        </div>
+    </div>
+    </div>
     </div>
   );
 };

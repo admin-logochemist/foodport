@@ -7,6 +7,9 @@ import {useSelector} from 'react-redux';
 import { selectItems, selectTotal } from '../features/BasketSlice';
 import { Sidebars } from './Sidebars';
 import "./DashboardTabs.css";
+import LockOpenIcon from '@mui/icons-material/LockOpen';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import CheckoutProd from './CheckoutProd';
 
 function Order({ order }) {
     const total=useSelector(selectTotal)
@@ -16,12 +19,10 @@ function Order({ order }) {
      
         <div className='order'>
             <h2>Order</h2>
-            <p>{moment.unix(order?.created).format("MMMM Do YYYY, h:mma")}</p>
-            <p className="order__id">
-                <small>{order._id}</small>
-            </p>
+           
+            <div style={{display:'flex',flexDirection:'row',flexWrap:'wrap'}}>
             { order?.basket.map(item => {
-                            return <CheckoutProduct
+                            return <CheckoutProd
                                 id={item?._id}
                                 img={item?.img || ''}
                                 title={item?.title||''}
@@ -31,11 +32,16 @@ function Order({ order }) {
                                 description={item?.description}
                             />
                         }
-                        )} 
+                        )}
+                        </div> 
            {console.log('order',order)}
+           <p><CalendarTodayIcon/> Order Date: {moment.unix(order?.created).format("MMMM Do YYYY, h:mma")}</p>
+            {/* <p className="">
+                <small><LockOpenIcon/> Stripe Key:{order._id}</small>
+            </p> */}
             <CurrencyFormat
                 renderText={(value) => (
-                    <h3 className="order__total">Order Total:{order?.amount} </h3>
+                    <h3 className="order__total">Order Total:${order?.amount} </h3>
                 )}
                 decimalScale={2}
                 value={total}

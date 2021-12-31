@@ -237,47 +237,30 @@ export default function FullWidthTabs(props) {
   return (
     <div className="tabs">
       {console.log('tabs', address)}
-      <Box sx={{ bgcolor: 'background.paper', width: '100%' }}>
-        <AppBar position="static">
-          <Tabs className="main-tabs"
-            value={value}
-            onChange={handleChange}
-            indicatorColor="secondary"
-            textColor="inherit"
-            variant="Width"
-            aria-label="full width tabs example"
-            centered
-          >
-            <Tab className="labels" label="Food Trucks" {...a11yProps(0)} />
-            <Tab className="labels" label="Local Resturants" {...a11yProps(1)} />
-            <Tab className="labels" label="BigChain Restaurants" {...a11yProps(2)} />
-          </Tabs>
-        </AppBar>
-        <SwipeableViews
-          axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-          index={value}
-          onChangeIndex={handleChangeIndex}
-        >
-          <TabPanel value={value} index={0} dir={theme.direction}>
-            <div className="Tabpanel12">
-              {renderFoodCart()}
-
-            </div>
-          </TabPanel>
-          <TabPanel value={value} index={1} dir={theme.direction}>
-            <div className="Tabpanel12">
-              {renderResturants()}
-
-            </div>
-          </TabPanel>
-          <TabPanel value={value} index={2} dir={theme.direction}>
-            <div className="Tabpanel12">
-
-              {renderResturant()}
-            </div>
-          </TabPanel>
-        </SwipeableViews>
+      <Box sx={{ width: '100%' }}>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+          <Tab label="Food Truck" {...a11yProps(0)} />
+          <Tab label="Local Resturant" {...a11yProps(1)} />
+          <Tab label="Big Chain Resturant" {...a11yProps(2)} />
+        </Tabs>
       </Box>
+      <TabPanel value={value} index={0}>
+        <div className='tabslayout'>
+      {renderFoodCart()}
+      </div>
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+      <div className='tabslayout'>
+      {renderResturants()}
+      </div>
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+      <div className='tabslayout'>
+      {renderResturant()}
+      </div>
+      </TabPanel>
+    </Box>
     </div>
   );
 }

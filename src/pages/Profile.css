@@ -1,7 +1,87 @@
-.test2 img{
-    border-radius: 50%;
-    height: 300px;
-    margin-left: -37px;
+.test2 img {
+    border-radius: 26px;
+    height: 272px;
+    text-align: center;
+    border: 5px solid white;
+    padding: 3px;
+}
+.MuiGrid-item {
+    margin: 0;
+    box-sizing: border-box;
+    background: #f1eeee61 !important;
+    padding: 20px !important;
+}
+.jss56 {
+    margin: 60px auto !important;
+}
+div.jss62 > h2 {
+    font-size: 18px;
+    position: relative;
+    top: 11px;
+    letter-spacing: 2px;
+    font-family: 'Poppins';
+    font-weight: 700;
+}
+.jss62 {
+    position: relative;
+    border-top: 5px solid white;
+    top: 13px;
+}
+div.jss39 h2 {
+    font-size: 17px !important;
+    letter-spacing: 2px !important;
+    font-family: 'Poppins' !important;
+    font-weight: 700 !important;
+    position: relative !important;
+    top: 14px !important;
+}
+.jss39 {
+    letter-spacing: 2px !important;
+    border-top: 2px solid white;
+    position: relative !important;
+    top: 18px !important;
+}
+div#full-width-tabpanel-0 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.MuiTabs-flexContainer {
+    display: flex !important;
+    justify-content: center !important;
+}
+.makeStyles-root-9{
+    width: 1320px;
+}
+.MuiGrid-item {
+    margin: 0;
+    box-sizing: border-box;    
+    background: #f1eeee61 !important;
+    padding: 20px;
+    border-radius: 10px !important;
+}
+
+.jss33 {
+    display: block !important;
+    margin: 0 auto !important;
+}
+.jss61 {
+    padding: 24px;
+    flex-grow: 1;
+    background: #d9d4d426;
+    border-radius: 13px;
+}
+.jss33 {
+    display: block !important;
+    margin: 126px auto !important;
+}
+.jss62 p:nth-child(3) {
+    letter-spacing: 2px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 15px;
 }
 @media only screen and (max-width: 1200px) {
     .test2 img{

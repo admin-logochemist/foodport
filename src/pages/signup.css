@@ -1,16 +1,30 @@
 .login {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   height: 94vh;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
+  box-shadow: 10px 10px 5px grey !important;
+  background: #a10f0f;
 }
 .login__container {
-  display: flex;
-  align-items: center;
   flex-direction: column;
+  border: 4px solid wheat;
+  padding: 29px;
+  height: 46vh;
+  box-shadow: 1px 1px 15px grey;
+  border-radius: 12px;
+  background: white;
 }
+.logo-pngs{
+  width: 220px;
+      height: 50px;
+      position: relative!important;
+      left: unset !important;
+      margin: 49px auto !important;
+      display: block;
+  }
 .logo {
   object-fit: contain;
   height: 50px;
@@ -28,18 +42,19 @@
 }
 .login__container > form > select {
   height: 50px;
-  font-size: 15px;
   padding-left: 10px;
   margin-bottom: 10px;
-  border-radius: 5px;
+  border-radius: 12px;
+  border: none;
 }
 .login__container > form > button {
   width: 355px;
   height: 54px;
   font-size: large;
-  background-color: rgb(64, 64, 163);
+  background-color: #4040a3;
   border-radius: 5px;
-  color: white;
+  color: #fff;
+  border-radius: 18px;
 }
 .login__container > form > p {
   margin-top: 10px;
@@ -80,12 +95,25 @@
     margin-top: 350px;
   }
 }
+.MuiButton-label {
+  width: 100%;
+  width: 100%;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  letter-spacing: 2px;
+  font-size: 12px;
+  padding: 0px;
+  font-weight: 600;
+}
 .register-btn {
-  border-radius: 10px;
+  border-radius: 45px;
   border: hidden;
   background-color: #d70000;
-  color: white;
+  color: #fff;
   font-weight: 700px;
+  padding: 8px 30px;
+  letter-spacing: 2px;
 }
 .divider {
   border-top: 3px solid #000;
@@ -107,10 +135,238 @@
 @media only screen and (max-width: 1200px) {
   .copyright-signup-login {
     display: flex;
-    margin-top: 150px;
   }
   .copyright-signup-login h1 {
     color: white;
     font-size: 12px;
   }
+}
+
+.main_from{
+  height: 700px;
+  width: 481px;
+  margin: 0 auto;
+  box-shadow: 0px 3px 39px grey;
+  top: 125px;
+  position: relative;
+  background-color: white;
+}
+
+.main_from::after{
+  position: absolute;
+  content: "";
+  left: 0;
+  height: 40%;
+  width: 100%;
+  background-color: #1fb4bdd4;
+}
+.upper_div::after{
+  position: absolute;
+  content: "";
+  top: 30%;
+  left: 0;
+  height: 26%;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+  border-radius: 135px;
+}
+.form_img{
+
+  background-size: cover;
+  position: relative;
+  /* top: -117px; */
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+.form_img form{
+  position: absolute;
+  top: 17%;
+  width: 100%;
+  z-index: 9;
+}
+.form_img form input:focus{
+  background-color: rgba(128, 128, 128, 0.151) !important;
+  border: none !important;
+  transition: all .7s linear;
+  border-radius: 8px !important;
+  color: black;
+  font-family: Poppins;
+}
+.form_img form input::placeholder{
+  letter-spacing: 1px;
+  color: black;
+}
+.form_img form input{
+  border-radius: 0% !important;
+  border-bottom: 1px solid black !important;
+  border: none;
+  padding-left: 35px;
+}
+.form_row h3{
+  font-family: Poppins;
+}
+.icons_groups > img{
+  position: relative;
+  left: 8px;
+  height: 19px;
+  top: 29px;
+}
+.df{
+  margin-top: 60px;
+}
+.gh{
+  margin-top: 123px;
+}
+.jk{
+  margin-top: 183px;
+}
+.form_row{
+  box-shadow: 5px 5px 10px grey;
+  width: 431px;
+  margin: auto !important;
+  padding: 17px;
+  border-radius: 20px;
+  background: white;
+  margin: 27px auto !important;
+  height: 450px;
+}
+.form_rows{
+  box-shadow: 5px 5px 10px grey;
+  width: 431px;
+  margin: auto !important;
+  padding: 17px;
+  border-radius: 20px;
+  background: white;
+  margin: 27px auto !important;
+  height: 520px;
+}
+center > img{
+  height: 69px;
+  margin: 26px;
+}
+.form_btns:hover{
+  background-color: red;
+  transition: all .5s linear;
+  color: white;
+}
+.form_btns{
+  border: none;
+  outline: none;
+  padding: 10px 33px;
+  border-radius: 43px;
+  font-family: Poppins;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.btns-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.icons_group > img{
+ position: absolute;
+ left: 25px;
+ height: 19px;
+ top: 100px;
+}
+.secd > img{
+ top: 156px;
+}
+@media screen and (max-width:500px) {
+  .main_from{
+      width: 400px;
+  }
+  .form_row{
+      width: 350px;
+  }
+  .form_rows {
+    box-shadow: 5px 5px 10px grey;
+    width: 344px;
+  }
+  center > img {
+      height: 50px;
+      width: 186px;
+      object-fit: fill;
+  }
+  .form_img{
+    background-image: unset !important;
+      background-color: red;
+  }
+}
+@media screen and (max-width:400px) {
+  .main_from{
+      width: 95%;
+  }
+  .form_row{
+      width: 80%
+  }
+  .form_img form input{
+      font-size: 13px;
+  }
+  .form_btns{
+      padding: 10px 15px;
+      font-size: 12px;
+  }
+}
+@media screen and (max-width:352px) {
+  .main_from{
+      width: 90%;
+  }
+  .form_row{
+      width: 75%
+  }
+}
+@media only screen and (max-width: 1500px){
+  .login__container {
+    height: 65vh;
+}
+center > img {
+  height: 69px;
+  position: relative;
+}
+.main_from {
+  height: 571px;  
+  top: 22px;
+} 
+.form_img form {
+  top: 1%;
+}
+.form_img {
+  height: 114vh !important;
+}
+.form_row {
+  margin: 0px auto !important;
+}
+.form_rows {
+  margin: 8px auto !important;
+  height: 473px;
+}
+}
+
+@media only screen and (max-width: 568px){
+  .login {
+    height: 126vh;
+    padding-top: 21px;
+}
+
+}
+.add_food input{
+  padding-left: 0% !important;
+}
+.img-list{
+  border-bottom: none !important;
+}
+.descrip textarea{
+  width: 100%;
+  position: relative;
+  top: -9px;
+}
+.descrip textarea::placeholder{
+  padding-left: 5px;
+  padding-top: 5px;
+  color: #000;
 }
