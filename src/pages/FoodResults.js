@@ -10,12 +10,12 @@ import {
  
   
 function FoodResults({
-    img, title, description, price,email,_id,remail
+    img, title, description, price,email,_id,remail, quantity, price_total
 }) {
     const dispatch = useDispatch();
     const addItemsToBasket = () => {
         const product = {
-            img, title, description, price,_id,remail
+            img, title, description, price,_id,remail, quantity, price_total
         }
         dispatch(addToBasket(product))
     

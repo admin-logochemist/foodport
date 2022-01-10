@@ -8,11 +8,13 @@ import CurrencyFormat from "react-currency-format";
 import { selectUser } from '../features/UserSlice'
 import {  selectItems, selectTotal } from '../features/BasketSlice';
 import axios from './axios';
+import { SocialIcon } from 'react-social-icons';
 import { db } from "../firebase";
 import TextField from '@mui/material/TextField';
 import Navbar from '../components/Navbar'
 import itemd from './a.jpg'
 import pay from './peyment-card.png'
+import Footer from './Footer';
 
 const Stripe = () => {
     const user = useSelector(selectUser)
@@ -103,9 +105,10 @@ const Stripe = () => {
 
     return (
         <>
+      
         <Navbar/>
         <div className="checkout_banner"></div>
-        <form class="default-form-wrap style-2" onSubmit={handleSubmit}>
+
         <div className="containerrs mt-5">
     <div className="main_container_form">
         <h6 className="rder-head">Your Order</h6>
@@ -119,6 +122,8 @@ const Stripe = () => {
                                 price={item.price}
                                 rating={item.rating}
                                 _id={item._id}
+                                quantity={item.quantity}
+                                price_total={item.price_total}
                             />
                         ))}
         </div>
@@ -139,14 +144,16 @@ const Stripe = () => {
                         </div>
                     </li>
                 </ul>
-
+                <form class="default-form-wrap style-2" onSubmit={handleSubmit}>
                 <div class="col-md-12">
                     <label class="mt-3">Card Number</label>
                     <div class="single-input-wrap">
                     <CardElement onChange={handleChange}/>
                     </div>
                 </div>
+                </form>
             </div>
+            
             <button class="orderBtn" disabled={processing || disabled || succeeded}> {processing ? <p>Processing</p> : "Place Order"}</button>
         </div> 
     </div>   
@@ -202,8 +209,15 @@ const Stripe = () => {
     </div> 
    
 </div>
-</form>
 
+
+<Footer/>
+                <div className="copyright-home">
+                    <h1>Copyright 2020.All rights reserved.</h1>
+                    <SocialIcon bgColor="#fff" fgColor="#d70000" style={{ height: 25 }} url="https://twitter.com/" />
+                    <SocialIcon bgColor="#fff" fgColor="#d70000" style={{ height: 25 }} url="https://facebook.com/" />
+                    <SocialIcon bgColor="#fff" fgColor="#d70000" style={{ height: 25 }} url="https://instagram.com/" />
+                </div>
       
 
    

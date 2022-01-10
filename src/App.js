@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Home from './pages/home';
@@ -12,7 +12,7 @@ import AddFood from './pages/AddFood';
 import Restaurantbox from './pages/restaurant-box';
 import Dashboard from './Dashboard';
 import Checkout from './pages/Checkout';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Stripe from './pages/Stripe';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js'
@@ -26,18 +26,37 @@ import Orderss from './pages/Orderss';
 import FoodItem from './pages/FoodItem';
 import MainLogin from './pages/MainLogin';
 import USignIn from './pages/USignIn';
+import { useDispatch } from 'react-redux';
+import { login, logout } from './features/UserSlice';
 function App() {
+
+    useEffect(async () => {
+        let USER = await localStorage.getItem('USER');
+        let EMAIL = await localStorage.getItem('EMAIL');
+        let NAME = await localStorage.getItem('NAME');
+        
+        console.log('data user ka data', USER, EMAIL, NAME)
+        if (USER && USER?.length) {
+            dispatch(login({ uid: USER, email: EMAIL, displayName: NAME }));
+        }
+
+        else {
+            dispatch(logout);
+        }
+
+    }, [])
+    const dispatch = useDispatch()
     const promise = loadStripe('pk_test_51J5C8JLwMYFuVwcJpbQ11WOXgTvDiN8VHT0KkDG1R3OpRxGAZSmB072QxdrPVcKVeiebK9aOt10IHvOvfeUpfkoP00OqXNDT48')
     const public_URL = 'food.demoapp-lc.com'
     return (
         <Router basename={process.env.public_URL}>
-          
+
             <Switch>
                 <Route exact path='/' exact component={Home} />
-                <Route exact path='/About' component={About} />
-                <Route exact path='/Contact' component={Contact} />
-                <Route exact path='/SignUp' component={SignUp} />
-                <Route exact path='/SignIn' component={SignIn} />
+                <Route exact path='/About' exact component={About} />
+                <Route exact path='/contact'exact component={Contact} />
+                <Route exact path='/SignUp' exact component={SignUp} />
+                <Route exact path='/SignIn' exact component={SignIn} />
                 <Route exact path='/MainLogin' component={MainLogin} />
                 <Route path='/addResturant' component={AddResturant} />
                 <Route path='/addfoodcart/' component={AddFoodCart} />

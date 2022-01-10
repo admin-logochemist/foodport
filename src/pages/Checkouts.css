@@ -1,3 +1,4 @@
+
 .checkout_banner{
     background-image: url(./Banner-5.jpg);
     position: relative;
@@ -48,4 +49,64 @@ button.shop_bttn {
     box-shadow: inset 2px 4px 12px grey;
     border: 3px solid red;
     background-color: white;
+}
+@media only screen and (max-width: 1200px)
+{
+    .checkout_container {
+        padding: 80px;
+        height: 200px;
+        margin-bottom: 100px !important;
+    }
+
+}
+@media screen and (max-width:992px) {
+    .checkout_container{
+        max-width: 100% !important;
+    }
+    .proceed_head {
+        font-size: 17px;
+    }
+    .shop_head {
+        font-size: 17px;
+    }
+    button.shop_bttn {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width:992px) {
+    button.shop_bttn {
+        padding: 10px 8px !important;
+        letter-spacing: 0px !important;
+        font-size: 13px;
+    }
+    .shop_head {
+        font-size: 14px;
+        letter-spacing: 0px;
+    }
+    .proceed_head {
+        font-size: 14px;
+        letter-spacing: 0px;
+    }
+}
+@media screen and (max-width:501px) {
+    .checkout_container{
+        height: 105px;
+        padding: 16px !important;
+    }
+    .proceed_head {
+        font-size: 12px;
+    }
+    button.shop_bttn {
+        padding: 10px 6px !important;
+        font-size: 12px !important;
+    }
+    .shop_head {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 350px)
+{
+    .checkout_container {
+        height: 150px;
+    }
 }

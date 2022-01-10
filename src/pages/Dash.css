@@ -1,0 +1,63 @@
+
+/* @media (min-width: 600px){
+    .jss15, .jss8 {
+        width: unset !important;
+    }
+    
+} */
+.back_icon_svg{
+    position: relative;
+    left: 24px;
+    top: -4px;
+    font-size: 21px;
+    border: 1px solid #8080808c;
+    border-radius: 10px;
+    color: gray;
+}
+.MuiTypography-root {
+    color: black !important;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 21px;
+}
+.MuiSvgIcon-root {
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    font-size: 1.5rem;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    flex-shrink: 0;
+    user-select: none;
+    color: #000000d6 !important;
+}
+.MuiIconButton-root:hover {
+    background-color: #80808012 !important;
+}
+@media screen and (max-width: 992px){
+    .jss15, .jss8 {
+        width: 0 !important;
+    }
+    .makeStyles-drawerClose-38 {
+        width: 0px !important;
+        overflow-x: hidden !important;
+        transition: width 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+    }
+    .makeStyles-drawerClose-8 {
+        width: 0px !important;
+        overflow-x: hidden !important;
+        transition: width 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+    }
+    .makeStyles-drawerClose-18 {
+        width: 0px !important;
+        overflow-x: hidden !important;
+        transition: width 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+    }
+}
+
+/* @media (min-width: 600px)
+{
+.makeStyles-drawerClose-18 {
+    width: unset !important;
+}
+} */

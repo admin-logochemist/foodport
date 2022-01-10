@@ -14,7 +14,7 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { selectUser } from "../features/UserSlice";
 import { useHistory } from "react-router";
 import { Avatar } from "@material-ui/core";
-import { Sidebars } from "./Sidebars";
+import  Sidebars  from "./Sidebars";
 import "./DashboardTabs.css";
 
 
@@ -55,7 +55,7 @@ const Profile = (props) => {
   return (
     <div className="div">
       <div>
-        <Sidebars/>
+     <Sidebars/>
       </div>
 
     <div className={classes.root}>

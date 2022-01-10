@@ -1,0 +1,124 @@
+    <div class="main_dashboard">
+        <div class="container whole_container">
+            <div class="rows dash_head_row">
+                <h5>Welcome to Dashboard</h5>
+            </div>
+            <div class="rows">
+            <!-- FIRTS REVIEWS SECTION -->
+             <div class="left_reviews">
+                 <h3 class="left_reviews_head_fir">Total views</h3>
+                 <div class="progress_reviews">
+                     <span class="review_head_sec">Total Views Today</span>
+                     <div class="circle-big">
+                        <div class="text">
+                            1,750
+                            <!-- <div class="small">kcal</div> -->
+                        </div>
+                        <svg>
+                            <circle class="bg" cx="57" cy="57" r="52"></circle>
+                            <circle class="progress" cx="57" cy="57" r="52"></circle>
+                        </svg>
+                    </div>
+                 </div>
+                 <div class="bottom_rviews">
+                     <span class="last_day_re">
+                         Last Day
+                      <div class="inner_divs">
+                        <i class="green fas fa-long-arrow-alt-up" style="user-select: auto;"></i>
+                        <small>5555</small>
+                      </div>
+                     </span>
+                     <span class="last_week_re">
+                         Last Week
+                         <div class="inner_divs">
+                            <i class="red fas fa-long-arrow-alt-down"></i>
+                            <small>5555</small>
+                         </div>
+                        </span>
+
+                 </div>
+             </div>
+
+             <!-- CHART BAR SECTION -->
+             <div class="chart_wrapper">
+
+                <h3 class="left_reviews_head_fir">Total views</h3>
+                <canvas id='c'></canvas>
+                <!-- <div class="label">text</div> -->
+              </div>
+            </div>
+
+            <!-- CARDS SECTION -->
+            <div class="rows mr_top">
+
+                <div class="top_five_cards">
+
+                    <h3 class="left_reviews_head_fir">Top 5 Food Cards</h3>
+
+                    <div class="top_scrolling">
+
+                        <div class="top_cards_item">
+                            <img src="cards.jpg" alt="">
+                            <h3 class="top_cards_title">The Taco Cartel
+                                <br>
+                                <span class="top_cards_ddes">Los Angeles, CA, USA</span>
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="v_all">
+                        <button>View All</button>
+                    </div>
+
+                </div>
+
+                <div class="top_five_cards">
+
+                    <h3 class="left_reviews_head_fir">Top 5 Restaurants</h3>
+
+                    <div class="top_scrolling">
+
+                        <div class="top_cards_item">
+                            <img src="cards.jpg" alt="">
+                            <h3 class="top_cards_title">The Taco Cartel
+                                <br>
+                                <span class="top_cards_ddes">Los Angeles, CA, USA</span>
+                            </h3>
+                        </div>
+
+                    </div>
+                    <div class="v_all">
+                        <button>View All</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CUSTOMER REVEIWS SECTION -->
+            <div class="rows mr_top">
+
+                <div class="customer_reviews_section">
+
+                    <h3 class="left_reviews_head_fir">Customer Reviews (580)</h3>
+
+                    <div class="top_scrolling">
+
+                        <div class="top_cards_item customer_cards">
+                            <img src="test.png" alt="">
+                            <h3 class="top_cards_title">The Taco Cartel
+                                <br>
+                                <span class="top_cards_ddes">Los Angeles, CA, USA</span>
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="v_all">
+                        <button>View All</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>

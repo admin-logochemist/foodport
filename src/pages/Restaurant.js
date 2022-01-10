@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import { Sidebars } from './Sidebars';
+import  Sidebars  from './Sidebars';
 import "./DashboardTabs.css";
 import BoxSx from './RestaurentsDetails'
 import { useSelector } from 'react-redux';
@@ -51,12 +51,12 @@ const Restaurant = () => {
     return (
         <div className="div">
             <div>
-            <Sidebars/>
+       <Sidebars/>  
             </div>
            <div>
            <div classname="Dashboard-box" style={{display:'flex',alignItems:'center',justifyContent:'center',paddingTop:10}}>
               
-                <h2 style={{ fontWeight: 'bold',fontSize:40 }}>Your Restaurants</h2>
+                <h2 className='dashheading'>Your Restaurants</h2>
               </div>
               <div className="btn-one">
               {renderResturants()}

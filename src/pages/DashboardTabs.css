@@ -33,7 +33,10 @@
     flex-wrap: wrap-reverse;
     flex-direction: column;
 }
-
+.dashheading{
+    font-weight: bold;
+    font-size: 40px;
+}
 .center{
     text-align: left;
 }
@@ -43,10 +46,27 @@
     border-bottom: 3px solid white!important;
     padding: 9px!important;
 }
-.btn-one {
-    padding: 40px;
+.btn-one div {
+    margin: 4px auto !important;
+    display: block !important;
+}
+.btn-one{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
+
+}
+@media screen and (min-width: 992px){
+    .btn-one {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        position: relative;
+        left: 5%;
+        width: 95%;
+    }
 }
 .name {
     font-size: 16px;
@@ -59,14 +79,51 @@
 }
 .div{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     
+}
+@media only screen and (max-width: 801px)
+{
+    .map_heading{
+        display: flex;
+        align-items: center;
+        flex-direction: column !important;
+    }
+    .Ryan-Garry {
+        padding: unset !important;
+    }
+    .canvas_box{
+        display: flex;
+        width: 100%;
+    }
+    .main_map_box{
+        margin: 4px auto !important;
+    }
+
+}
+
+.main_map_box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 43px auto;
+}
+.canvas_box{
+    display: flex;
+    width: 80%;
 }
 @media only screen and (max-width: 1200px) {
     .left-area{
         width: 145px;
         background-color: #d70000;
         height: 100vh;
+    }
+}
+@media only screen and (max-width: 600px){
+    .dashheading{
+        font-size: 23px !important;
+        text-align: center !important;
     }
 }
 .Dashboard-box {
@@ -133,5 +190,10 @@
         top: 7px;
         border: 1px solid white;
         border-radius: 20px;
+    }
+}
+@media screen and (max-width:501px) {
+    .btn_dashboard {
+        padding: 10px 15px !important;
     }
 }

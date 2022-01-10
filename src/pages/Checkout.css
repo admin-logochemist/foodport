@@ -103,3 +103,76 @@
         font-size: 20px;
     }
 }
+.single-input-wrap input {
+    background: #FAF7F2;
+    border-radius: 6px;
+}
+.checkpgrow label {
+    color: black;
+}
+.btnadd,.btnminus{
+    padding: 1px 10px;
+    font-size: 17px;
+    border: none;
+}
+.inputqty{
+    padding: 0px 9px;
+    border: 2px dotted #80808070;
+}
+@media screen and (max-width: 650px)
+{
+    .bill-payment-wrap, .main_container_form{
+        width: 95%;
+    }
+    .foodMain_checkout h4.food_checkout_title {
+        font-size: 14px;
+        text-align: left;
+    }
+    p.food_checkout_descriptionsss {
+        font-size: 12px;
+        text-align: left;
+    }
+    .pricetags_checkout {
+        position: absolute;
+        right: -84px;
+        top: unset;
+        float: right;
+    }
+}
+
+@media screen and (max-width: 551px)
+{
+    .foodport_items_checkout {
+        width: 85%;
+        margin: 0 auto;
+        display: block;
+        padding-top: 10px;
+    }
+    .foodMain_checkout h4.food_checkout_title {
+        text-align: center;
+    }
+    p.food_checkout_descriptionsss {
+        text-align: center;
+    }
+    .pricetags_checkout {
+        position: unset !important;
+        text-align: center !important;
+    }
+    .foodMain_checkout {
+        display: block !important;
+        position: unset !important;
+        padding-left: 6px;
+    }
+    .foodport_items_checkout>img {
+        height: 100px;
+        width: 134px;
+        margin: 10px auto;
+        display: block;
+    }
+    .quantity_group{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 43px;
+    }
+}
+

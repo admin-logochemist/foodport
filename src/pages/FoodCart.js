@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import { Sidebars } from './Sidebars';
+import  Sidebars from './Sidebars';
 import "./DashboardTabs.css";
 import { useSelector } from 'react-redux';
 import { selectUser } from '../features/UserSlice';
@@ -56,7 +56,7 @@ const FoodCart = () => {
     return (
         <div className="div">
             <div>
-            <Sidebars/>
+           <Sidebars/>
             </div>
             <div>
             <div classname="Dashboard-box" style={{display:'flex',alignItems:'center',justifyContent:'center',paddingTop:10}}>

@@ -49,7 +49,7 @@ history.push("/orders")
                 <li  onClick={signOut}><a  X>{user? "LOGOUT":"LOGIN"}</a></li>
                 <li onClick={handletheClickss}><a  className='foodport_partner'>BECOME A PARTNER</a></li>
                 <li onClick={handletheClick}><a><i class="fas fa-shopping-cart"></i> {items.length}</a></li>
-                <li className='user_icon'></li>
+                {/* <li className='user_icon'></li> */}
                 <li className='header_user_icon'>{user? `Hi ${user?.displayName}`:<Avatar/>}</li>
             </ul>
                {/* <div className='md_topper_info'>

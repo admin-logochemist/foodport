@@ -67,3 +67,8 @@
     font-size: 14px;
     border-radius: 5px;
 }
+@media screen and (max-width: 992px){
+    .btn-FOodcart {
+        padding: 11px 8px !important;
+        margin: 0 8px !important;
+    }}

@@ -25,6 +25,7 @@ import {
 } from 'react-places-autocomplete';
 import Navbar from '../components/Navbar'
 import { FaSearch } from 'react-icons/fa';
+import ResNavbar from './ResNavbar';
 const Home = () => {
 
     const handleSelect = async value => {
@@ -32,7 +33,10 @@ const Home = () => {
         const ll = await getLatLng(results[0])
         console.log(ll);
 setAddress(value)
-
+setCoordinates(ll)
+    }
+    const godown=()=>{
+        window.scrollTo(0, 600);
     }
     const [locations, setLocations] = useState('')
     const [details, setDetails] = useState(null);
@@ -41,7 +45,8 @@ setAddress(value)
     
     return (
         <>
-            <Navbar />
+        {/* <ResNavbar/> */}
+             <Navbar /> 
             <div className="home">
                 <header className="banner" style={{
                     backgroundSize: "cover",
@@ -72,10 +77,12 @@ setAddress(value)
                 className: 'location-search-input',
               })}
             />
-            <a href='#search' className='searches'>
+             {/* <a href='' className='searches'>  */}
+             <div onClick={godown} className='searches'>
             <i class="fas fa-search-location"></i>
-            <button className="search" >Search</button>
-            </a>
+            <button className="search"  >Search</button>
+            </div>
+            {/* </a> */}
             </div>
             <div className="autocomplete-dropdown-container">
               {loading && <div>Loading...</div>}
@@ -103,6 +110,7 @@ setAddress(value)
         )}
       </PlacesAutocomplete>
                             {console.log(address)}
+                            {console.log("CPP",coordinates)}
                         </div>
                         <h1 className="test__description"></h1>
                     </div>
@@ -116,6 +124,7 @@ setAddress(value)
                         <h1>Discover The
                             <span style={{ color: 'red' }}> Best Food In Town
                             </span></h1>
+                        
                     </div>
                     <br />
                     <Tabs address={address} />
@@ -204,7 +213,7 @@ setAddress(value)
                 <br />
                 <Footer />
                 <div className="copyright-home">
-                    <h1>Copyright 2020.All rights reserved.</h1>
+                    <h1>Copyright 2022.All rights reserved.</h1>
                     <SocialIcon bgColor="#fff" fgColor="#d70000" style={{ height: 25 }} url="https://twitter.com/" />
                     <SocialIcon bgColor="#fff" fgColor="#d70000" style={{ height: 25 }} url="https://facebook.com/" />
                     <SocialIcon bgColor="#fff" fgColor="#d70000" style={{ height: 25 }} url="https://instagram.com/" />

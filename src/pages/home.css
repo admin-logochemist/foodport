@@ -396,15 +396,7 @@
 
 @media only screen and (max-width: 1200px) {
   .banner__title {
-    margin-right: 60px;
-    margin-top: 50px;
-    font-size: 3rem;
-    font-weight: bold;
-    padding-bottom: 0.3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    margin-top: 148px;
   }
 }
 .test__description {
@@ -414,6 +406,13 @@
   font-size: 0.8rem;
   max-width: 360px;
   height: 80px;
+}
+.Download-the-App p {
+  padding: unset;
+  text-align: left;
+}
+.Red-section {
+  height: 34vh;
 }
 .banner__fadeBottom {
   height: 17rem;
@@ -549,9 +548,28 @@ input.location-search-input {
   letter-spacing: 3px;
   color: black;
 }
-@media only screen and (max-width: 993px) {
+@media only screen and (max-width: 992px) {
   .back_black_box {
     width: 90%;
+}
+.banner__title {
+  margin-top: 129px;
+}
+.banner {
+  height: 60vh!important;
+}
+.fa-search-location {
+  padding: 14.5px;
+  height: 50px;
+  position: relative;
+  top: 7px;
+  font-size: 17px;
+}
+.search {
+  width: 79px;
+  position: relative;
+  top: 7px;
+  font-size: 12px;
 }
 }
 @media only screen and (max-width: 734px)
@@ -588,10 +606,37 @@ input.location-search-input {
   font-size: 21px;
   box-shadow: inset -61px 5px 1px #e70d0d !important;
 }
+.Red-section {
+  height: 57vh;
+}
+.footer .columnss {
+  width: 40%;
+}
+
+.MuiTab-wrapper {
+  font-size: 10px;
+}
 .search {
   width: 140px;
   position: relative;
   top: 5px;
+}
+.Download-the-App {
+  display: block;
+  position: relative;
+  top: unset;
+}
+.Download-the-App p {
+  padding: unset;
+  color: white;
+  text-align: left;
+  padding-left: 17px;
+}
+.Android-apple-image {
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 45px;
 }
 .fa-search-location {
   padding: 14.5px;
@@ -913,7 +958,7 @@ input.location-search-input::placeholder {
 }
 @media only screen and (max-width: 500px) {
     .footer .columnss {
-      width: 50%;
+      width: 100%;
     }
     .footer .columnss h1 {
       font-size: 14px;
@@ -922,8 +967,105 @@ input.location-search-input::placeholder {
       font-size: 13px;
     }
 }
-@media only screen and (max-width: 340px) {
+/* @media only screen and (max-width: 340px) {
   .footer .columnss {
     width: 100%;
+  }
+} */
+@media only screen and (max-width: 400px){
+  
+  .Red-section {
+      height: 65vh;
+  }
+  .fa-search-location {
+      display: none;
+  }
+}
+@media only screen and (max-width: 415px)
+{
+    .bannertitle {
+        font-size: 30px;
+    }
+    .search {
+      top: 59px;
+  }
+}
+
+@media only screen and (max-width: 412px)
+{
+  .search {
+    width: 81px;
+    position: relative;
+    top: 59px;
+    right: 6px;
+}
+.fa-search-location {
+  padding: 14.5px;
+  height: 50px;
+  position: relative;
+  top: 63px;
+}
+}
+
+@media only screen and (max-width: 376px)
+{
+    .search {
+        top: 63px;
+    }
+    .banner {
+        height: 75vh!important;
+    }
+    .Red-section {
+        height: 65vh;
+    }
+}
+@media only screen and (max-width: 361px)
+{
+    .bannertitle {
+        margin-top: -75px;
+    }
+    .banner {
+        height: 80vh!important;
+    }
+    .Red-section {
+        height: 90vh;
+    }
+}
+@media only screen and (max-width: 321px)
+{
+    .banner__title {
+        font-size: 23px;
+    }
+    .search {
+      top: 62px;
+  }
+    .Discover h1 {
+        font-size: 15px;
+    }
+    .Red-section {
+        height: 100vh;
+    }
+}
+@media screen and (max-width: 500px)
+{
+  .footer .columnss ul {
+    text-align: center !important;
+}
+.footer .columnss h1 {
+    text-align: center !important;
+}
+.social a i {
+    padding: 9px !important;
+    font-size: 15px !important;
+}
+
+.footer .columnss {
+  text-align: center;
+}
+
+}
+@media screen and (max-width: 501px) {
+  .copyright-home > a {
+      display: none !important;
   }
 }

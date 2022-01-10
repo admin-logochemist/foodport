@@ -16,7 +16,15 @@
     padding: 1px 80px;
     margin: auto;
 }
-
+@media (min-width: 901px)
+{
+    .imagesboxes {
+        width: 100%;
+    }
+    .foodorders {
+        width: 100%;
+    }
+}
 .order, .orderss {
     padding: 90px;
     background-color: #fff;
@@ -28,6 +36,36 @@
     border: 1px solid hsla(0,0%,50.2%,.34901960784313724);
     box-shadow: inset -3px 2px 17px #80808047;
 }
+@media screen and (max-width: 800px)
+{
+    .order, .orderss {
+        display: flex;
+        flex-direction: column !important;
+    }
+    .ordersdatils {
+        margin-left: unset !important;
+        width: 100%;
+        margin-top: 13px;
+    }
+}
+@media screen and (max-width: 501px)
+{
+    .orders, .ordersss {
+        padding: unset !important;
+        margin: unset !important;
+    }
+    .imagesboxes {
+        width: 125% !important;
+    }
+    .ordersdatils {
+        width: 123% !important;
+    }
+    .orders>h1 {
+        font-size: 23px;
+        text-align: center;
+    }
+}
+
 .ordersdatils  {
     text-align: left;
     border: 1px solid #80808052;

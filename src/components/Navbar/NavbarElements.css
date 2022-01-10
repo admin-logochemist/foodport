@@ -6,7 +6,7 @@
   font-family: 'Poppins', sans-serif;
 }
 nav{
-  position: fixed;
+  /* position: fixed; */
   z-index: 99;
   width: 100%;
   background: rgb(238, 238, 238);
@@ -129,6 +129,10 @@ nav .wrapper{
   position: absolute;
   right: 30px;
   top: 10px;
+  color: white;
+  border: 0.1px solid;
+  border-radius: 9px;
+  padding: 0px 10px
 }
 nav input{
   display: none;
@@ -143,10 +147,20 @@ nav input{
     display: block;
     color: black;
   }
+  
+  .header_user_icon {
+    color: white !important;
+    float: left;
+    left: 32px;
+    top: -32px;
+    letter-spacing: 1px;
+    display: inline;
+}
   .wrapper .nav-links{
     position: fixed;
     height: 100vh;
     width: 100%;
+    z-index: 9999;
     max-width: 350px;
     top: 0;
     color: white;
@@ -224,9 +238,7 @@ nav input{
     border-radius: 5px;
     font-size: 18px;
   }
-  /* .foodport_partner ,.user_icon, .header_user_icon ,.fa-shopping-cart{
-    display: none !important;
-  } */
+
 }
 
 .foodport_partner{
@@ -237,23 +249,13 @@ nav input{
   padding: 9px 23px !important;
   box-shadow: inset -61px 5px 1px #e73c3c !important;
 }
-.user_icon{
-  display: block;
-  border-left: 2px solid #d9d7d7;
-  height: 33px;
-  margin: auto 0;
-  position: relative;
-  left: 19px;
-  top: 6px;
-}
+
 .header_user_icon{
-    color: black;
-    position: relative;
-    display: block;
-    float: right;
-    right: -32px;
-    top: 2px;
-    letter-spacing: 1px;
+  left: 6%;
+  top: -24px;
+  letter-spacing: 2px;
+  color: black;
+  white-space: pre-line;
 }
 .md_topper_info{
   display: flex;
@@ -261,47 +263,12 @@ nav input{
 li{
   list-style: none;
 }
-/*TOPPER SECTION*/
-/* .foodport_partner_sed{
-  background: red !important;
-  border-radius: 38px !important;
-  color: white !important;
-  font-size: 14px !important;
-  padding: 9px 23px !important;
-  box-shadow: inset -61px 5px 1px #e73c3c !important;
-  position: relative;
-  left: -25%
+
+@media only screen and (max-width: 500px){
+    #close-btn:checked~.btn.menu-btn {
+         background-color: unset !important;
+    }
 }
-.user_icon_border{
-  display: block;
-  border-left: 2px solid #d9d7d7;
-  height: 33px;
-  margin: auto 0;
-  position: relative;
-  left: -20px;
+label.btn.menu-btn {
+  background: none;
 }
-.card_sed{
-  color: red;
-  position: relative;
-  left: -105%;
-  background: white;
-  padding: 5px 7px;
-  border-radius: 20px;
-  -webkit-user-select: auto;
-  display: block !important;
-  top: 14px;
-}
-.user_sed{
-  color: red;
-  position: relative;
-  left: -25%;
-  background: white;
-  padding: 5px 7px;
-  border-radius: 20px;
-}
-.header_user_icon_sed {
-  color: black;
-  float: right;
-  letter-spacing: 1px;
-  font-size: 13px;
-} */

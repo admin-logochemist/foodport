@@ -42,7 +42,7 @@ function Checkout() {
 		<Navbar/>
         <div>
         <div class="checkout_top">
-        <div class="container">
+        <div class="container checkout_container">
             <div class="row mt-5">
                 <div class="col-6 p-3 box-left">
                     <h4 class="shop_head">{items.length === 0 ? "Your Food Basket Is Empty, Please Add Some Items" : "Your Shopping Basket :"}</h4>

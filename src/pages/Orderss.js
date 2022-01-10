@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { selectUser } from '../features/UserSlice'
 import Order from './Order'
 import { selectItems } from '../features/BasketSlice';
-import { Sidebars } from './Sidebars';
+import  Sidebars  from './Sidebars';
 import Ordersss from './Ordersss';
 
 
@@ -40,7 +40,7 @@ function Orderss() {
         <div className="div">
 
             <div>
-                <Sidebars />
+              <Sidebars/>
             </div>
             <div className='orders'>
                 <h1>Your Orders</h1>

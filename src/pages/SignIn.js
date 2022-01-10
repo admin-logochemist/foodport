@@ -27,7 +27,7 @@ function SignIn(props) {
           uid: userAuth.uid,
           displayName: userAuth.displayName,
         }))
-        history.push('/dashboard')
+     
       } else {
         dispatch(logout)
       }

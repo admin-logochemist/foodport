@@ -10,6 +10,7 @@ import { selectResturant } from '../features/ResSlice';
 const ResturantInfo = ({obj}) => {
   const history=useHistory();
   const  dispatch = useDispatch();
+  
   const openResturant=()=>{
     let payload = obj
     dispatch(selectResturant(payload));

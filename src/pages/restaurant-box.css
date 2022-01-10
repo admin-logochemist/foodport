@@ -9,9 +9,14 @@
     justify-content: space-between;
     flex-direction: row;
 }
+@media screen and (max-width: 992px){
+    .right-card {
+      display: none;
+    }
+}
 .right-card{
     float: right;
-    width: 20%;
+    width: 400px;
     height: 66vh;
     position: fixed;
     overflow: hidden;
@@ -26,12 +31,11 @@
     flex-direction: row;
     flex-wrap: wrap;
 } */
-
 .picback{
     width: 100%;
     height: 70vh;
     background-size: cover !important;
-    background-position: center;
+    background-position: center center;
 }
 .gocheck:hover{
 background-color: #ff2c2c;
@@ -112,11 +116,9 @@ p.subtotals > span,p.totals_amounts span{
 }
 .default{   
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    float: left;
     position: relative;
-    left: 16%;
+    left: 6%;
 }
 p.your_card_para {
     font-size: 14px;
@@ -130,8 +132,48 @@ p.subtotals, p.totals_amounts {
     letter-spacing: 1px;
     padding-left: unset !important;
 }
+.review_top{
+    margin: 0 auto;
+    position: relative;
+    left: 6%;
+}
 .next{
     padding: 0px;
+}
+.review_input{
+    width: 100%;
+    height: 50px;
+    border: navajowhite;
+    border-radius: 10px;
+}
+.review_btn{
+    margin: auto;
+    display: block;
+    padding: 10px 61px;
+    margin-top: 52px;
+    border: none;
+    outline: none !important;
+    background: #9f93933d;
+    border-radius: 10px;
+}
+.review_label{
+    margin-top: 35px;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+.review_form{
+    width: 25%;
+    background: #80808026;
+    padding: 10px;
+    margin-left: 10px;
+}
+.res_reviews_section {
+    width: 33%;
+    display: block;
+    border: 3px solid rgba(183,181,181,.2);
+    border-radius: 0 0 10px 10px;
+    background: hsla(0,0%,50.2%,.011764705882352941);
+    box-shadow: inset 6px 3px 5px hsl(0deg 0% 50% / 14%);
 }
 @media only screen and (max-width: 1200px){
     .next{
@@ -156,3 +198,107 @@ p.subtotals, p.totals_amounts {
 }
 
 
+.geoloc{
+    height: 492px;
+    width: 165%;
+    background: #80808030;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: inset 0px 1px 10px 5px #80808047;
+}
+.maploc {
+    height: 388px;
+    width: 100%;
+}
+
+@media screen and (max-width:1025px) {
+    .geoloc{
+        width: 100%;
+    }
+  }
+  @media screen and (max-width:769px) {
+    .maploc {
+        height: 345px;
+    }
+    .geoloc{
+        width: 152%;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .geoloc{
+        width: 125%;
+    }
+  }
+  
+  @media screen and (max-width:412px) {
+    .geoloc{
+        width: 85%;
+    }
+  }
+  @media screen and (max-width:376px) {
+    .geoloc{
+        width: 85%;
+    }
+  }
+  @media screen and (max-width:412px) {
+    .geoloc{
+        width: 73%;
+    }
+  }
+  @media screen and (max-width:415px) {
+    .geoloc{
+        width: 80%;
+    }
+  }
+  @media screen and (max-width:361px) {
+    .maploc {
+        height: 200px;
+    }
+    .geoloc{
+        width: 77%;
+    }
+  }
+  @media screen and (max-width:281px) {
+    .geoloc{
+        width: 67%;
+    }
+  }
+  .lochead{
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .locbottom{
+    font-size: 18px;
+  }
+  @media screen and (max-width:1201px) {
+    .review_top {
+        width: 80%;
+        display: flex !important;
+        flex-direction: column;
+    }
+    .res_reviews_section {
+        width: 60%;
+    }
+    .review_form {
+        width: 60%;
+        margin-left: unset;
+    }
+}
+@media screen and (max-width:992px) {
+    .review_top {
+        width: 100% !important;
+        margin-right: unset !important;
+        margin-left: unset !important;
+        left: unset !important;
+    }
+    .res_reviews_section {
+        width: 85%;
+        margin: auto;
+    }
+    .review_form {
+        width: 85%;
+        margin: auto !important;
+        margin-top: 14px !important;
+    }
+}

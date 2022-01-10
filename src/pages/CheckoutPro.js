@@ -23,7 +23,7 @@ const changeStyle = () => {
 
     
 
-        <div class="col-lg-4 col-md-8 mt-3">
+        <div class="col-lg-4 col-md-8 mt-3 checkout_box_item">
           <div class="foodport_items">
           <img src={img} alt="" class="img-fluid" />
              <div class="foodMain">

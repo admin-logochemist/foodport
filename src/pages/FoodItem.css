@@ -7,6 +7,11 @@
     box-shadow: 5px 5px 19px grey;
     cursor: pointer;
 }
+@media screen and (max-width:992px) {
+    .checkout_box_item{
+        margin: auto !important;
+    }
+}
 .foodport_items > img{
     height: 80px;
     width: 80px;
@@ -46,4 +51,55 @@
     position: absolute;
     right: 33px;
     top: 37px;
+}
+@media screen and (max-width:450px) {
+    .checkout_box_item {
+        margin: auto!important;
+        height: 318px;
+        width: 70%;
+    }
+    .foodport_items>img {
+        display: block !important;
+        height: 144px;
+        width: 215px;
+        margin: 10px auto;
+    }
+    .foodMain {
+        height: 107px;
+    }
+    .pricetags {
+        position: relative !important;
+        top: -18px !important;
+        right: unset !important;
+        left: 16px;
+        margin-bottom: 18px;
+    }
+}
+@media screen and (max-width: 361px)
+{
+    .checkout_box_item {
+        height: 386px;
+        width: 82%;
+    }
+}
+@media screen and (max-width: 321px)
+{
+    .checkout_box_item {
+        margin: auto!important;
+        height: auto;
+        width: 86%;
+    }
+}
+@media screen and (max-width: 281px){
+    .checkout_box_item {
+        width: 100%;
+}
+}
+@media screen and (max-width:500px){
+    .foodMain h4.food_title, .foodMain p.food_descriptionsss, .pricetags{
+        text-align: center;
+    }
+    .food_descriptionsss{
+        text-align: center;
+    }
 }

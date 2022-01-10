@@ -1,0 +1,357 @@
+/* ++ UNIVERSAL CLASSES ++ */
+.rows {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/* ++ DASHBOARD MAIN HEADING ++ */
+.dash_head_row {
+    padding: 15px;
+    padding-left: 10px;
+    background: #b7b5b533;
+    box-shadow: inset 1px 0px 5px 8px #80808017;
+}
+
+.dash_head_row h5 {
+    color: black;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* ++ LEFT REVIEWS SECION ++ */
+
+.left_reviews {
+    width: 30%;
+    margin-top: 20px;
+    border: 3px solid #b7b5b533;
+    border-radius: 0 0 10px 10px;
+    background: #80808003;
+    box-shadow: inset 6px 3px 5px #80808024;
+}
+
+.progress_reviews .review_head_sec {
+    text-align: center;
+    display: block;
+}
+
+.left_reviews_head_fir {
+    background: #b7b5b533;
+    font-size: 18px;
+    padding: 12px;
+    letter-spacing: 1px;
+    padding-left: 5px;
+}
+
+.bottom_rviews {
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.last_day_re,
+.last_week_re {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.inner_divs i {
+    font-size: 26px;
+    position: relative;
+    top: 3px;
+}
+
+.inner_divs .green {
+    color: #1ceb1c;
+}
+
+.inner_divs .red {
+    color: #ff4f4f;
+}
+
+.inner_divs small {
+    font-size: 15px;
+    font-weight: 400;
+    border-bottom: 2px solid #d3d2d28c;
+}
+
+.circle-big {
+    position: relative;
+    width: 114px;
+    height: 114px;
+    margin: 25px auto;
+}
+
+.circle-big svg {
+    width: 114px;
+    height: 114px;
+}
+
+.circle-big .bg {
+    fill: none;
+    stroke-width: 5px;
+    stroke: #80808075;
+}
+
+.circle-big .progress {
+    fill: none;
+    stroke-width: 10px;
+    stroke: #ff4f4f;
+    /* stroke-linecap: round; */
+    stroke-dasharray: 194.56;
+    stroke-dashoffset: 70;
+    transform: rotate(-97deg);
+    transform-origin: 50% 50%;
+    animation: big 2.5s ease-in-out;
+}
+
+.circle-big .text {
+    position: absolute;
+    width: 100%;
+    top: 45px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+@keyframes big {
+    from {
+        stroke-dashoffset: 326.56;
+    }
+
+    to {
+        stroke-dashoffset: 60;
+    }
+}
+
+/* ++ CHART BAR SECTION ++ */
+.chart_wrapper {
+    display: block;
+    margin: 20px auto 0;
+    border: 3px solid rgba(183,181,181,.2);
+    width: 65%;
+    height: auto;
+    position: relative;
+    background: rgba(255,0,0,0);
+    border-radius: 0 0 10px 10px;
+    box-shadow: inset 6px 3px 5px hsl(0deg 0% 50% / 14%);
+}
+.chart_wrapper p {
+    text-align: center;
+}
+
+.label {
+    height: 1em;
+    padding: .3em;
+    background: rgba(255, 255, 255, .8);
+    position: absolute;
+    display: none;
+    color: #333;
+
+}
+
+#c {
+    top: -37px;
+    position: relative;
+    margin: 0px;
+}
+/* ++ TOP FIVE CARDS ++ */
+.mr_top {
+    margin-top: 30px;
+}
+
+.top_five_cards {
+    width: 45%;
+    border: 3px solid #b7b5b533;
+    margin: auto;
+    border-radius: 0 0 10px 10px;
+}
+
+.top_cards_item {
+    width: 95%;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 1px 0px 5px #80808069;
+    background: #e3e3e31f;
+    border-bottom: 2px solid #80808059;
+    margin: 4px;
+    position: relative;
+    left: 2%;
+}
+
+.top_cards_item img {
+    height: 80px;
+    width: 120px;
+    object-fit: cover;
+}
+
+.top_cards_title {
+    padding-left: 13px;
+    font-size: 17px;
+    line-height: 21px;
+    position: relative;
+    top: 12px;
+}
+
+.top_cards_ddes {
+    font-size: 14px;
+}
+.v_all > button{
+    margin: 0 auto;
+    display: block;
+    border: navajowhite;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    padding: 10px 44px;
+    outline: none !important;
+}
+.v_all > button:hover{
+    background-color: rgba(255, 0, 0, 0.678);
+    color: white;
+    transition: all 1s;
+    border: none;
+}
+.top_scrolling {
+    height: 400px;
+    overflow-y: scroll;
+    display: block;
+    padding-top: 10px;
+    background: #ebebeb1f;
+}
+.top_scrolling::-webkit-scrollbar {
+    width: 7px;
+}
+
+.top_scrolling::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 0, 0, 0.678);
+    background-image: -webkit-linear-gradient(90deg,rgba(255, 255, 255, .2) 25%,transparent 25%,transparent 50%,
+    rgba(255, 255, 255, .2) 50%,rgba(255, 255, 255, .2) 75%,transparent 75%,transparent);
+}
+
+/* ++ CUSTOMER REVIEWS SECTION ++ */
+.customer_reviews_section {
+    width: 80%;
+    margin: auto;
+    display: block;
+    border: 3px solid #b7b5b533;
+    border-radius: 0 0 10px 10px;
+    background: #80808003;
+    box-shadow: inset 6px 3px 5px #80808024;
+}
+
+.customer_reviews_section .customer_cards > img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 70px;
+    border: 2px solid #7e7d7d4d;
+    padding: 4px;
+}
+@media screen and (max-width:1201px){
+    .whole_container{
+        padding: 0 !important;
+    }
+    #c{
+        width: 100% !important;
+        top: unset;
+    }
+    .chart_wrapper{
+        height: auto;
+    }
+    .top_cards_title {
+        font-size: 14px;
+    }
+    .top_cards_ddes {
+        font-size: 11px;
+    }
+    .top_five_cards {
+        width: 48%;
+    }
+    .top_cards_item img {
+        height: 70px;
+        width: 100px;
+    }
+    .mr_top {
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width:769px){
+
+    .left_reviews {
+        width: 78%;
+    }
+
+    .chart_wrapper {
+        height: 331px;
+        width: 100%;
+        top: 11px;
+    }
+    .top_five_cards {
+        width: 100%;
+    }
+    .mr_top {
+        margin-top: 33px;
+    }
+    .top_five_cards{
+        width: 100%;
+        margin: 10px auto;
+    }
+    .customer_reviews_section {
+        width: 100%;
+    }
+    .customer_reviews_section .customer_cards > img {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .whole_container{
+        width: 95% !important;
+    }
+    .chart_wrapper {
+        height: auto;
+    }
+}
+@media screen and (max-width: 431px){
+    .left_reviews {
+        width: 100%;
+    }
+}
+@media screen and (max-width:992px){
+    .whole_container {
+        padding-left: unset!important;
+    }
+    
+}
+@media only screen and (max-width: 1118px)
+{
+    .whole_container{
+        position: relative;
+        left: 3%;
+    }
+}
+@media only screen and (max-width: 1053px)
+{
+    .whole_container{
+    padding-left: 89px ;
+    left: unset !important;
+    }
+}
+.testi_para{
+    font-size: 13px;
+    border-top: 2px solid #80808061;
+    letter-spacing: 1px;
+}
+/* Resturent Box Review */

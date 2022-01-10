@@ -40,7 +40,7 @@ const Footer = () => {
 
         <div class="columnss social">
           <a href="/">
-            <img style={{ width: 230, cursor: 'pointer',position: 'relative',left: -16,}}href="/#/"src={logo} alt="Logo"
+            <img className="footerlogo" style={{ width: 230, cursor: 'pointer',position: 'relative',left: -16,}}href="/#/"src={logo} alt="Logo"
             />
           </a>
           <a href="#">
