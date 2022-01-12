@@ -45,8 +45,8 @@ setCoordinates(ll)
     
     return (
         <>
-        {/* <ResNavbar/> */}
-             <Navbar /> 
+         {/* <ResNavbar/>  */}
+             <Navbar />  
             <div className="home">
                 <header className="banner" style={{
                     backgroundSize: "cover",

@@ -1,176 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import ReactStars from "react-rating-stars-component";
-// import "./restaurant-box.css"
-import "./resturantnew.css"
-import logo from '../images/logofooter.png'
-import { useSelector } from 'react-redux';
-import { selectOpenResturant } from '../features/ResSlice';
-import FoodResults from './FoodResults';
-import { Image } from 'react-bootstrap';
-import { db } from '../firebase'
-import SimpleMap from './SimpleMap'
-import { useHistory } from 'react-router'
-import { selectItems, selectTotal } from '../features/BasketSlice'
-import { useLocation } from 'react-router';
-import { selectUser } from '../features/UserSlice'
-import Navbar from '../components/Navbar'
-import Footer from './Footer';
-import { Form, Input, Button } from 'antd';
-import test from "./test.png"
-import ReviewsTab from './ReviewsTab';
-import { GoogleApiWrapper, Map } from 'google-maps-react';
-import Review from "./review.png"
-import FoodBanner from "./form_Banner.jpg"
-import FoodOwner from "./business_owner.jpg"
-import UserImg from "./user-icon.png"
-import ResturantProduct from './ResturantProduct';
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
-
-function Restaurantbox(props) {
-  const ratingChanged = (newRating) => {
-    console.log(newRating);
-  };
-  const onFinish = (value) => {
-    console.log('Success:', value);
-    db.collection("reviews").add(
-      {
-       username:username,
-       email:email,
-       reviews:reviews,
-       _id: selectResturant._id,
-       resemail:selectResturant?.email
-        
-      })
-  };
-
-  const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
-  };
-
-  const [value, setValue] = React.useState(0);
-  const [food, setFood] = useState([]);
-  const [username, setUserName] = useState("")
-const [email, setEmail] = useState("");
-const [UReviews, setUReviews] = useState("")
-  const [reviews, setReviews] = useState("")
-  const { state } = useLocation()
-  const total = useSelector(selectTotal)
-  const items = useSelector(selectItems);
-  const history=useHistory();
-  const user =useSelector(selectUser);
-
-  const getResturants = () => {
-    console.log('state?._id', state?._id)
-    db.collection('food').where('_id','==',selectResturant._id).onSnapshot(snapshot => (
-      setFood(snapshot.docs.map(doc => ({
-        data: doc.data()
-      }
-      )))
-    ))
-  };
-  const getReviews = () => {
-   
-    db.collection('reviews').where('_id','==',selectResturant._id).onSnapshot(snapshot => (
-      setUReviews(snapshot.docs.map(doc => ({
-        data: doc.data()
-      }
-      
-      )))
-    ))
-    console.log("Ureviews", UReviews)
-  };
-  useEffect(() => {
-    getReviews();
-    getResturants();
-    cardanimation();
-  }, [])
-  const cardanimation=()=> {
-    let id = null;
-    const elem = document.getElementById("animate");
-    let pos = 0;
-    clearInterval(id);
-    id = setInterval(frame, 100);
-    function frame() {
-      if (pos == 10) {
-        clearInterval(id);
-       
-      } else {
-        pos++; 
-      //   elem.style.top = pos + "px"; 
-        //elem.style.right = pos + "px"; 
-      }
-    }
-  }
-
-  const goCheckout=()=>{
-    if(!user){
-      history.push("./MainLogin")
-      alert("Please Signin Before Checkout")
-     }else{
-         history.push("./stripe")
-     }
-     
-  }
-
-  const renderFood = () => {
-    if (food.length > 0) {
-      console.log("food", food);
-      async function trying(url) {
-        let image = await url.then(async (url) => { return url })
-        console.log('image', image)
-        return image.toString()
-      }
-      // console.log('state', img)
-      return food.map((item, index) => {
-        var detail = []
-        console.log("ï", item)
-        for (const i in item) {
-          detail.push(item[i])
-        }
-        return detail.map((item) => {
-          // const storageRef = projectStorage.ref(`images/${item.id}/`).getDownloadURL();
-          return (
-            <ResturantProduct
-              img={item?.postImage}
-              category={item?.category}
-              title={item?.title}
-              description={item?.description}
-              price={item?.price}
-              _id={item?._id}
-              useremail={selectResturant?.email}
-              remail={item.remail}
-              quantity={1}
-              price_total={item?.price}
-            />
-          );
-        })
-      })
-    }
-  };
-  const renderReviews = () => {
-    if (UReviews && UReviews?.length) {
-     
-      // console.log('state', img)
-      return UReviews.map((item, index) => {
-        return <ReviewsTab
-          obj={item}
-        />
-      
-      })
-    }
-  };
-  const selectResturant = useSelector(selectOpenResturant)
-  return (
-  
-    <>
-     <div>
-       <Navbar/>
-     <section  style={{backgroundImage:`url(${selectResturant?.postImage})`}} className="restaurent_box_banner banner_effect">
+    <section className="restaurent_box_banner banner_effect">
         <div className="container">
             <div className="row">
                 <div className="col-lg-8 col-sm-12">
                     <div className="text_section_res_box">
-                        <span className="restaurent_head">{selectResturant?.resName}</span>
+                        <span className="restaurent_head">Mars Bar & Restaurant</span>
                         <br />
                         <span className="star one">★</span> <span className="star two">★</span>
                         <span className="star three">★</span> <span className="star four">★</span>
@@ -182,8 +15,8 @@ const [UReviews, setUReviews] = useState("")
                             <i className="fas fa-check-circle"></i>
                             <span>Claimed</span>
                             <span className="dollars">$$</span>
-                            <a className="bar_links"></a>
-                            <a className="bar_links" style={{color:'white'}}>  {selectResturant?.address}</a>
+                            <a className="bar_links">Bars,</a>
+                            <a className="bar_links">American (New)</a>
                             <a href="" className="eidt_btn_res">Edit</a>
                         </div>
                         <br />
@@ -215,51 +48,85 @@ const [UReviews, setUReviews] = useState("")
                     <br />
                     <span>Most mentioned dishes</span>
                     <div className="scrolling_res_box">
-               {renderFood()}
+                        <div className="inner_item_div">
+                            <img src="form_Banner.jpg" alt="">
+                            <h5>Buffalo Wings</h5>
+                            <p>1 : Photo</p>
+                            <p>5 : Review</p>
+                        </div>
+                        <div className="inner_item_div">
+                            <img src="form_Banner.jpg" alt="">
+                            <h5>Buffalo Wings</h5>
+                            <p>1 : Photo</p>
+                            <p>5 : Review</p>
+                        </div>
+                        <div className="inner_item_div">
+                            <img src="form_Banner.jpg" alt="">
+                            <h5>Buffalo Wings</h5>
+                            <p>1 : Photo</p>
+                            <p>5 : Review</p>
+                        </div>
+
+                        <div className="inner_item_div">
+                            <img src="form_Banner.jpg" alt="">
+                            <h5>Buffalo Wings</h5>
+                            <p>1 : Photo</p>
+                            <p>5 : Review</p>
+                        </div>
+
+                        <div className="inner_item_div">
+                            <img src="form_Banner.jpg" alt="">
+                            <h5>Buffalo Wings</h5>
+                            <p>1 : Photo</p>
+                            <p>5 : Review</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div className="col-lg-4 mt-1">
 
                 <div className="get_direction_box">
-                    <span className="span_one" style={{color: "rgba(2,122,151,1)"}}>
-                    {selectResturant?.email}
+                    <span className="span_one" style="color: rgba(2,122,151,1);">
+                        http://www.example.com
                         <i className="fas fa-retweet"></i>
                     </span>
 
                     <hr />
                     <br />
 
-                    <span className="span_one">{selectResturant?.phone}
+                    <span className="span_one">12345678910
                         <i className="fas fa-phone-alt"></i>
                     </span>
 
                     <hr />
                     <br />
 
-                    <span className="span_one" style={{fontSize:14}}>
+                    <span className="span_one" style="font-size: 14px;">
                         <h6 className="span_three_head">Get Directions</h6>
-                        {selectResturant?.address}
+                        798 Brannan St San Francisco, CA 94103
                         <i className="fas fa-directions"></i>
                     </span>
 
                     <hr />
 
-                    <span className="span_one" style={{color: "rgba(2,122,151,1)"}}>
+                    <span className="span_one" style="color: rgba(2,122,151,1);">
                         Message the Business<i className="far fa-comment-dots"></i>
                     </span>
 
                 </div>
             </div>
         </div>
-        <hr className='hr1'/>
+        <hr style="width: 70%; margin: 20px 0;">
 
         <div className="row">
             <div className="col-lg-4 mt-5">
                 <div className="restaurent_small_map">
                     <h5 className="map_head mb-3">Location & Hours</h5>
                     <div className="restaurent_locat_map">
-                    <SimpleMap className="map_layout" lat={selectResturant?.lat} lng={selectResturant?.lng}/>
+                        <iframe className="map_layout"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.7806761080233!2d-93.29138368446431!3d44.96844997909819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32b6ee2c87c91%3A0xc20dff2748d2bd92!2sWalker+Art+Center!5e0!3m2!1sen!2sus!4v1514524647889"
+                            allowfullscreen>
+                        </iframe>
                     </div>
 
                     <div className="li-width">
@@ -379,12 +246,12 @@ const [UReviews, setUReviews] = useState("")
             </div>
         </div>
 
-        <hr className='hr1'/>
+        <hr style="width: 70%; margin: 20px 0;">
 
         <div className="row">
             <div className="col-lg-8 mt-5">
                 <div className="business_profile">
-                    <img src={FoodOwner} alt=""/>
+                    <img src="business_owner.jpg" alt="">
                     <h5 className="about_business">About the Business
                         <br />
                         <span>Business Owner</span>
@@ -402,7 +269,7 @@ const [UReviews, setUReviews] = useState("")
 
             </div>
         </div>
-        <hr className='hr1'/>
+        <hr style="width: 70%; margin: 20px 0;">
 
         <div className="row">
             <div className="col-lg-8 mt-5">
@@ -431,7 +298,7 @@ const [UReviews, setUReviews] = useState("")
                 </div>
             </div>
         </div>
-        <hr className='hr1'/>
+        <hr style="width: 70%; margin: 20px 0;">
 
         <div className="row">
             <div className="col-lg-7 mt-5">
@@ -439,7 +306,7 @@ const [UReviews, setUReviews] = useState("")
                     <h5 className="reviews_head">Recommended Reviews</h5>
                     <br />
                     <div className="reviews_sec_box">
-                       <img src={UserImg} alt=""/>
+                       <img src="user-icon.png" alt="">
                         <h5 className="reviews_info">User Name
                             <br />
                             <span className="user_locate">Location</span>
@@ -457,12 +324,12 @@ const [UReviews, setUReviews] = useState("")
                 </div>
             </div>
         </div>
-        <hr className='hr1'/>
+        <hr style="width: 70%; margin: 20px 0;">
 
         <div className="row">
             <div className="col-lg-8">
                 <div className="reviews_demo">
-                    <img src={Review} alt=""/>
+                    <img src="review.png" alt="">
                     <h5 className="re_demo_head">
                         John Z.
                         <br />
@@ -495,7 +362,7 @@ const [UReviews, setUReviews] = useState("")
                <div className="items_scrolling">
 
                 <div className="restaurent_like_items mt-5">
-                    <img src={FoodBanner} alt=""/>
+                    <img src="form_Banner.jpg" alt="">
                     <br />
                     <span className="res_card_head mt-4 d-block">Born to Shop</span>
                     <div className="rating-stars_demo mt-1">
@@ -510,7 +377,7 @@ const [UReviews, setUReviews] = useState("")
                 </div>
 
                 <div className="restaurent_like_items mt-5">
-                    <img src={FoodBanner} alt=""/>
+                    <img src="form_Banner.jpg" alt="">
                     <br />
                     <span className="res_card_head mt-4 d-block">Born to Shop</span>
                     <div className="rating-stars_demo mt-1">
@@ -525,7 +392,7 @@ const [UReviews, setUReviews] = useState("")
                 </div>
 
                 <div className="restaurent_like_items mt-5">
-                    <img src={FoodBanner} alt=""/>
+                    <img src="form_Banner.jpg" alt="">
                     <br />
                     <span className="res_card_head mt-4 d-block">Born to Shop</span>
                     <div className="rating-stars_demo mt-1">
@@ -541,21 +408,5 @@ const [UReviews, setUReviews] = useState("")
 
                </div>
             </div>
-           
         </div>
-     
     </div>
-   
-     </div>
-   
-     </>
-
-  
-
-
-  );
-};
-
-export default Restaurantbox;
-
-

@@ -4,6 +4,10 @@
     justify-content: center;
     margin: 20px auto;
 }
+.foodmegamenu{
+    display: flex;
+    flex-direction: row;
+}
 .main_card{
     box-shadow: inset 9px 53px 83px grey;
     width: 97%;

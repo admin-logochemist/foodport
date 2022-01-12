@@ -144,17 +144,18 @@ const Stripe = () => {
                         </div>
                     </li>
                 </ul>
-                <form class="default-form-wrap style-2" onSubmit={handleSubmit}>
+               
                 <div class="col-md-12">
                     <label class="mt-3">Card Number</label>
                     <div class="single-input-wrap">
                     <CardElement onChange={handleChange}/>
                     </div>
                 </div>
-                </form>
+               
             </div>
-            
+            <form class="default-form-wrap style-2" onSubmit={handleSubmit}>
             <button class="orderBtn" disabled={processing || disabled || succeeded}> {processing ? <p>Processing</p> : "Place Order"}</button>
+            </form>
         </div> 
     </div>   
     <div class="bill-payment-wrap">
